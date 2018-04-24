@@ -96,7 +96,7 @@ return
         <head>
             <meta charset="utf-8"/>
             <title>Moteur de recherche pour les produits du catalogue Bächli...</title>
-            <link rel="stylesheet" media="screen" type="text/css" href="styles.css" />
+            <link rel="stylesheet" media="screen" type="text/css" href="assets/style.css" />
         </head>
         <body>
             <div id="main">
