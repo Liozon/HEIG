@@ -107,7 +107,7 @@ return
                         <div id="category">
                             <p>
                                 <label for="categoryList">Catégorie:</label> 
-                                <select id="categoryList" name="category">
+                                <select class="custom-select" id="categoryList" name="category">
                                     <option value="">Choisir une catégorie...</option>
     {
         for $category in distinct-values($collection//category)
