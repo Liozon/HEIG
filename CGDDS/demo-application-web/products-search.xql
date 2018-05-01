@@ -62,7 +62,7 @@ declare function local:showResults($collection, $category, $brand, $priceMin, $p
                 <tr>
                     <td>
                         {
-                            <a href="show-product.xql?product={util:collection-name($product)}/{util:document-name($product)}">{$i}</a>
+                            <a href="show-product.xql?product={util:collection-name($product)}/{util:document-name($product)}" target="_blank">{$i}</a>
                         }
                     </td>
                     <td>
@@ -96,7 +96,9 @@ return
         <head>
             <meta charset="utf-8"/>
             <title>Moteur de recherche pour les produits du catalogue Bächli...</title>
-            <link rel="stylesheet" media="screen" type="text/css" href="assets/style.css" />
+            <link rel="stylesheet" media="screen" type="text/css" href="assets/style.css"/>
+            <script src="assets/jquery.min.js"></script>
+            <script src="assets/script.js"></script>
         </head>
         <body>
             <div id="main">
@@ -139,13 +141,13 @@ return
                         <div id="price">
                             <p>
                                 <label for="priceMin">Prix min:</label>
-                                <input id="priceMin" type="text" name="priceMin" value="{$p_priceMin}" />
+                                <input id="priceMin" type="number" name="priceMin" value="{$p_priceMin}" />
                                 <label for="priceMax">Prix max:</label>
-                                <input id="priceMax" type="text" name="priceMax" value="{$p_priceMax}" />
+                                <input id="priceMax" type="number" name="priceMax" value="{$p_priceMax}" />
                             </p>
                         </div>
                         <div>
-                            <input id="submitButton" name="submit" type="submit" value="Envoyer" />
+                            <input class="button" id="submitButton" name="submit" type="submit" value="Rechercher" />
                         </div>
                     </form>
                 </div>

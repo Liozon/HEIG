@@ -1,70 +1,100 @@
+/*----------GÉNÉRAL----------*/
+
 html {
     background: white;
 }
 
-h1 {
+body {
     font-family: 'Roboto', sans-serif;
 }
 
 h2 {
-    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
 }
+
+/*----------CHAMPS DE RECHERCHE----------*/
 
 form {
-    font-family: 'Roboto', sans-serif;
+    width: 500px;
+    height: 440px;
+    background: #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: auto;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    position: relative;
 }
 
-input {
-    font-family: 'Roboto', sans-serif;
+input,
+select,
+option {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    transition: all 0.3s;
+    border-bottom: 2px solid #f07f8e;
+    margin-bottom: 12px;
+    transition: border-bottom 0.4s ease-in-out;
 }
 
-/*the container must be positioned relative:*/
-.custom-select {
-  position: relative;
+input:focus {
+    border-bottom: 2px solid #E1001E;
 }
-.custom-select select {
-  display: none; /*hide original SELECT element:*/
+
+.button {
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    border: 2px solid #f07f8e;
+    background: 0;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
-.select-selected {
-  background-color: DodgerBlue;
+
+.button:hover {
+    background: #E1001E;
+    color: #fff;
 }
-/*style the arrow inside the select element:*/
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
+
+select {
+    text-transform: lowercase;
 }
-/*point the arrow upwards when the select box is open (active):*/
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
+
+select::first-letter {
+    text-transform: capitalize;
 }
-/*style the items (options), including the selected item:*/
-.select-items div,.select-selected {
-  color: #ffffff;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
+
+select > option {
+    text-transform: lowercase;
+    background: #e6e6e6;
 }
-/*style items (options):*/
-.select-items {
-  position: absolute;
-  background-color: DodgerBlue;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
+
+select > option::first-letter {
+    text-transform: capitalize;
 }
-/*hide the items when the select box is closed:*/
-.select-hide {
-  display: none;
+
+/*----------CHAMPS DE RESULTATS----------*/
+
+tr > td {
+    text-transform: lowercase;
 }
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
+
+tr:nth-child(even) {
+    background: #f2f2f2
+}
+
+table {
+    width: 100%;
+}
+
+iframe {
+    border: none;
 }
