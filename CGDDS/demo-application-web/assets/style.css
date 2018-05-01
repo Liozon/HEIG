@@ -14,8 +14,13 @@ h2 {
 }
 
 /*----------CHAMPS DE RECHERCHE----------*/
+@keyframes form {
+    0%   {opacity: 0; bottom:50px;}
+    100% {opacity: 100; bottom:0px;}
+}
 
 form {
+    position: relative;
     width: 500px;
     height: 440px;
     background: #e6e6e6;
@@ -26,6 +31,8 @@ form {
     max-width: calc(100vw - 40px);
     box-sizing: border-box;
     position: relative;
+    animation-name: form;
+    animation-iteration-count: 1;
 }
 
 input,
@@ -93,8 +100,4 @@ tr:nth-child(even) {
 
 table {
     width: 100%;
-}
-
-iframe {
-    border: none;
 }
