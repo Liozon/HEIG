@@ -1,3 +1,3 @@
-export function test() {
-    console.log("Coucouille");
+export default function () {
+    console.log("Je suis un test n°2");
 }

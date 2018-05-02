@@ -131,9 +131,22 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
   !*** ./src/Models/Item.js ***!
   \****************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("throw new Error(\"Module parse failed: Unexpected token (9:39)\\nYou may need an appropriate loader to handle this file type.\\n|     },\\r\\n|     validate: function (attrs, options) {\\r\\n|         if (!_isString(attrs.title) || ) {\\r\\n|             return \\\"Error title is invalid\\\";\\r\\n|         }\\r\");\n\n//# sourceURL=webpack:///./src/Models/Item.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($, _) {/* harmony import */ var _Master__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Master */ \"./src/Models/Master.js\");\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (_Master__WEBPACK_IMPORTED_MODULE_0__[\"default\"].extend({    \n    defaults: function () {\n       return {\n            \"foo\":  \"bar\",\n            \"createAt\": $.now()\n        }\n    },\n    validate: function(attrs, options) {\n        if (!_.isString(attrs.title) || attrs.title == \"\") {\n            return \"Error title invalid\";\n        }\n    }\n}));\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\"), __webpack_require__(/*! underscore */ \"./node_modules/underscore/underscore.js\")))\n\n//# sourceURL=webpack:///./src/Models/Item.js?");
+
+/***/ }),
+
+/***/ "./src/Models/Master.js":
+/*!******************************!*\
+  !*** ./src/Models/Master.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony default export */ __webpack_exports__[\"default\"] = (Backbone.Model.extend({\n    initialize: function (attrs, options) {\n        this.on(\"change\", function () {\n            console.log(this.toJSON());\n            $.post(\"truc\", this.toJSON());\n        }) \n    }   \n}));\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/Models/Master.js?");
 
 /***/ }),
 
@@ -145,7 +158,7 @@ eval("throw new Error(\"Module parse failed: Unexpected token (9:39)\\nYou may n
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var Backbone__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Backbone */ \"./node_modules/Backbone/backbone.js\");\n/* harmony import */ var Backbone__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(Backbone__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Models_Item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Models/Item */ \"./src/Models/Item.js\");\n\r\n\r\nvar m1 = new _Models_Item__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({\r\n    title: \"Ceci est un titre\"\r\n});\r\nvar now = jQuery.now();\r\nwhile (now === jQuery.now());\r\nvar m2 = new _Models_Item__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({\r\n    foo: \"Ceci est un titre\"\r\n});\r\nconsole.log(m1.toJSON());\r\nconsole.log(m2.toJSON());\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var Backbone__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Backbone */ \"./node_modules/Backbone/backbone.js\");\n/* harmony import */ var Backbone__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(Backbone__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Models_Item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Models/Item */ \"./src/Models/Item.js\");\n\n\nvar m1 = new _Models_Item__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({\n    title: \"Ceçi est un titre\"\n});\nvar m2 = new _Models_Item__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({\n    title: \"Ceçi est un titre 2\"\n});\nm2.set({title: \"truc3\"});\nm2.set({title: \"truc5\"});\nm2.set({title: \"super truc6789\"});\n\nm1.set({title: \"truc\"});\nm1.set({title: \"truc2\"});\nm1.set({title: \"super truc\"});\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
