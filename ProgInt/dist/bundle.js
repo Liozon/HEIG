@@ -131,10 +131,9 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
   !*** ./src/Models/Item.js ***!
   \****************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony default export */ __webpack_exports__[\"default\"] = (Backbone.Model.extend({\r\n    defaults: function () {\r\n        return {\r\n            \"foo\": \"bar\",\r\n            \"createAt\": $.now(),\r\n        }\r\n    },\r\n    validate: function (attrs, options) {\r\n        if (!_isString(attrs.title)) {\r\n            return \"Error title is invalid\";\r\n        }\r\n    }\r\n}));\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/Models/Item.js?");
+eval("throw new Error(\"Module parse failed: Unexpected token (9:39)\\nYou may need an appropriate loader to handle this file type.\\n|     },\\r\\n|     validate: function (attrs, options) {\\r\\n|         if (!_isString(attrs.title) || ) {\\r\\n|             return \\\"Error title is invalid\\\";\\r\\n|         }\\r\");\n\n//# sourceURL=webpack:///./src/Models/Item.js?");
 
 /***/ }),
 

@@ -6,7 +6,7 @@ export default Backbone.Model.extend({
         }
     },
     validate: function (attrs, options) {
-        if (!_isString(attrs.title)) {
+        if (!_isString(attrs.title) || ) {
             return "Error title is invalid";
         }
     }
