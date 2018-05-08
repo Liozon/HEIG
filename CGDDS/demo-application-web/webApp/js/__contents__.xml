@@ -1,0 +1,12 @@
+<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/cgdds/webApp/js" owner="admin" group="dba" mode="755" created="2018-04-24T11:58:13+02:00" version="1">
+    <acl entries="0" version="1"/>
+    <resource type="BinaryResource" name="script.js" owner="admin" group="dba" mode="644" created="2018-04-24T11:58:13+02:00" modified="2018-05-01T11:56:19+02:00" filename="script.js" mimetype="application/javascript">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="isotope.pkgd.min.js" owner="admin" group="dba" mode="644" created="2018-04-24T11:58:13+02:00" modified="2018-04-24T11:58:13+02:00" filename="isotope.pkgd.min.js" mimetype="application/javascript">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="desktop.ini" owner="admin" group="dba" mode="644" created="2018-04-24T11:58:13+02:00" modified="2018-04-24T11:58:13+02:00" filename="desktop.ini" mimetype="application/octet-stream">
+        <acl entries="0" version="1"/>
+    </resource>
+</collection>

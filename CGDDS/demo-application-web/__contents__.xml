@@ -1,0 +1,8 @@
+<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/cgdds/webApp" owner="admin" group="dba" mode="755" created="2018-04-24T11:57:51+02:00" version="1">
+    <acl entries="0" version="1"/>
+    <resource type="BinaryResource" name="my-products-search.xql" owner="admin" group="dba" mode="644" created="2018-05-01T10:46:21+02:00" modified="2018-05-01T11:51:40+02:00" filename="my-products-search.xql" mimetype="application/xquery">
+        <acl entries="0" version="1"/>
+    </resource>
+    <subcollection name="js" filename="js"/>
+    <subcollection name="css" filename="css"/>
+</collection>
