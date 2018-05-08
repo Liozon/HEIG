@@ -33,7 +33,7 @@ $('document').ready(function(){
       
       // bind filter button click
       $('#filters').on( 'click', 'button', function() {
-         console.log("yo");
+         //console.log("yo");
         var filterValue = $( this ).attr('data-filter');
         // use filterFn if matches value
         filterValue = filterFns[ filterValue ] || filterValue;
@@ -54,5 +54,17 @@ $('document').ready(function(){
           $( this ).addClass('is-checked');
         });
       });
+    
+   /* $(".button").each(function capitalizeFirstLetter(s) {
+        var button = s[0].toUpperCase() + string.slice(1);
+        //var button = s.html();
+        //return button[0].toUpperCase() + s.slice(1);
+        console.log(button);
+    });*/
+    
+    
+                     
  
 })
+
+
