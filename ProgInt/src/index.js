@@ -6,11 +6,11 @@ import tmplItemFirst from "./Templates/ItemFirst.html";
 
 
 var m1 = new ModelItem({
-    title: "Ceçi est un titre",
+    title: "Ceci est un titre",
     body: "TRUC"
 });
 var m2 = new ModelItem({
-    title: "Ceçi est un titre 2"
+    title: "Ceci est un titre 2"
 });
 
 var v1 = new ViewItem({
@@ -22,7 +22,7 @@ var v2 = new ViewItem({
     template: tmplItem
 });
 
-$(function () { // attendre que le DOM soit OK
+$(function () { // attendre que le DOM soit prêt
     v1.render().appendTo("body");
     v2.render().appendTo("body");
     setTimeout(function () {
