@@ -407,7 +407,7 @@ eval("module.exports = function(){return \"\";};\n\n//# sourceURL=webpack:///./s
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (Backbone.View.extend({\r\n    \r\n    initialize: function() {\r\n        this.listenTo(this.model, \"change\", this.render);\r\n        \r\n    },\r\n    \r\n    render: function() {\r\n        console.log(this.model.toJSON());\r\n    }\r\n}));\n\n//# sourceURL=webpack:///./src/Views/Item.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (Backbone.View.extend({\r\n    \r\n    initialize: function() {\r\n        this.listenTo(this.model, \"change\", this.render);\r\n        \r\n    },\r\n    \r\n    render: function() {\r\n        console.log(this.model.toJSON());\r\n    }\r\n}));\n\n//# sourceURL=webpack:///./src/Views/Item.js?");
 
 /***/ }),
 

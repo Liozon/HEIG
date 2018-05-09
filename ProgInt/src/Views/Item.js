@@ -1,4 +1,3 @@
-
 export default Backbone.View.extend({
     
     initialize: function() {
