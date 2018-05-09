@@ -1,6 +1,6 @@
-import Master from "./Master";
+//import Master from "/Models/Master";
 
-export default Master.extend({    
+export default Backbone.Model.extend({    
     defaults: function () {
        return {
             "foo":  "bar",

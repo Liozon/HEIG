@@ -8,11 +8,11 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
-    watch:true,
+    watch: true,  
     module: {   
         rules: [
             { test: /\.html$/, use: 'handlebars-loader' },
-            { test: /\.css$/, use: ['style-loader', 'css-loader']}
+            { test:/\.css$/, use: [ 'style-loader', 'css-loader' ]}
         ]
     },
     resolve: {

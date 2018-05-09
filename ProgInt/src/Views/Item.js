@@ -1,11 +1,16 @@
+import tmplDefault from "Templates/Item.html";
+import "Styles/Item.css";
+
 export default Backbone.View.extend({
-    
-    initialize: function() {
-        this.listenTo(this.model, "change", this.render);
-        
-    },
-    
-    render: function() {
-        console.log(this.model.toJSON());
-    }
-})
+
+  initialize: function(attrs, options) {
+    this.template =  attrs.template || tmplDefault;
+    this.listenTo(this.model, "change", this.render);     
+  },
+
+  render: function() {      
+      this.$el.html(this.template(this.model.attributes));
+      return this.$el; 
+  }
+
+});
