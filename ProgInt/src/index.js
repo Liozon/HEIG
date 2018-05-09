@@ -1,32 +1,32 @@
 import Backbone from "Backbone";
 import ModelItem from "./Models/Item";
 import ViewItem from "./Views/Item";
-import ViewItem from "./Templates/Item.html";
+import tmplItem from "./Templates/Item.html";
+import tmplItemFirst from "./Templates/ItemFirst.html";
 
-//var m1 = new ModelItem({
-//    title: "Ceci est un titre"
-//});
-//var m2 = new ModelItem({
-//    title: "Ceci est un 2e titre"
-//});
 
-// 1e cours
+var m1 = new ModelItem({
+    title: "Ceçi est un titre",
+    body: "TRUC"
+});
+var m2 = new ModelItem({
+    title: "Ceçi est un titre 2"
+});
 
-//m2.set({title: "truc3"});
-//m2.set({title: "truc5"});
-//m2.set({title: "super truc6789"});
+var v1 = new ViewItem({
+    model: m1,
+    template: tmplItemFirst
+});
+var v2 = new ViewItem({
+    model: m2,
+    template: tmplItem
+});
 
-//m1.set({title: "truc"});
-//m1.set({title: "truc2"});
-//m1.set({title: "super truc"});
-
-// 2e cours
-
-var v1 = new ViewItem({model: m1});
-$(function () { //Attendre que le DOM soit prêt
-    var dom = v1.render();
-    dom.appendTo("body");
+$(function () { // attendre que le DOM soit OK
+    v1.render().appendTo("body");
+    v2.render().appendTo("body");
+    setTimeout(function () {
+        m1.set({title: "test!!"});
+        m2.set({title: "nouveau test!!"});
+    }, 2000);    
 })
-
-v1.render();
-m1.set({title: "nouveau titre!"});
