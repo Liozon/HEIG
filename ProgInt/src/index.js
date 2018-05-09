@@ -1,13 +1,14 @@
 import Backbone from "Backbone";
 import ModelItem from "./Models/Item";
 import ViewItem from "./Views/Item";
+import ViewItem from "./Templates/Item.html";
 
-var m1 = new ModelItem({
-    title: "Ceci est un titre"
-});
-var m2 = new ModelItem({
-    title: "Ceci est un 2e titre"
-});
+//var m1 = new ModelItem({
+//    title: "Ceci est un titre"
+//});
+//var m2 = new ModelItem({
+//    title: "Ceci est un 2e titre"
+//});
 
 // 1e cours
 
