@@ -11,7 +11,8 @@ module.exports = {
     watch:true,
     module: {   
         rules: [
-            { test: /\.html$/, use: 'handlebars-loader' }
+            { test: /\.html$/, use: 'handlebars-loader' },
+            { test: /\.css$/, use: ['style-loader', 'css-loader']}
         ]
     },
     resolve: {

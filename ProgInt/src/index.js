@@ -15,7 +15,7 @@ var m2 = new ModelItem({
 
 var v1 = new ViewItem({
     model: m1,
-    template: tmplItemFirst
+    template: tmplItem
 });
 var v2 = new ViewItem({
     model: m2,
