@@ -6,6 +6,6 @@ export default Backbone.View.extend({
     },
     
     render: function() {
-        console.log("render here");
+        console.log(this.model.toJSON());
     }
 })
