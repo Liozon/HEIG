@@ -94,7 +94,7 @@ let $p_priceMin := request:get-parameter("priceMin", "")
 let $p_priceMax := request:get-parameter("priceMax", "")
 let $p_submit := request:get-parameter("submit", "")
 
-let $collection := collection("/db/cgdds/cc2145/baechli-products")
+let $collection := collection("/db/cgdds/cc2175/baechli-products")
 
 return
     
@@ -124,7 +124,7 @@ return
         then 
 					<option selected="selected">{data($category)}</option>
         else 
-					<option>{data($category)}</option>
+					<option value="{data($category)}">{data($category)}</option>
     }
                                 
 				</select>
@@ -142,7 +142,7 @@ return
         then 
 					<option selected="selected">{data($brand)}</option>
         else 
-					<option>{data($brand)}</option>
+					<option value="{data($brand)}">{data($brand)}</option>
     }
                                 
 				</select>
@@ -152,7 +152,7 @@ return
 			<input class="button" id="submitButton" name="submit" type="submit" value="Rechercher"/>
 		</div>
 		</form>
-		<div class="result">
+		<div class="result hidden">
 		<h2>Trier par</h2>
 		<div id="sorts" class="button-group">
 			<button class="button is-checked" data-sort-by="original-order">Par défaut</button>

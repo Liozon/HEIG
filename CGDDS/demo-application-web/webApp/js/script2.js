@@ -1,8 +1,9 @@
 $(function () {
-    //searchButton();
+    searchButton();
     //$("#submitButton").click(updateSubmitValue);
     capitalizeFirstLetter();
     changeEmptyElement();
+    showResults();
 });
 
 function searchButton() {
@@ -14,7 +15,6 @@ function searchButton() {
 }
 
 function updateSubmitValue() {
-    console.log("FUCK");
     $("#submitButton").val("Rechercher");
     searchButton();
 }
@@ -37,4 +37,12 @@ function capitalizeFirstLetter() {
 function changeEmptyElement() {
     $("option").eq(1).text("(Sans catégorie)");
     //console.log("changeEmptyElement done");
+}
+
+function showResults() {
+    if (window.location.href.indexOf("category") > -1) {
+        //console.log("with category");
+        $(".result").removeClass("hidden");
+        $(".is-checked").click();
+    }
 }
