@@ -1,4 +1,4 @@
-//import Master from "/Models/Master";
+//import Master from "Models/Master";
 
 export default Backbone.Model.extend({    
     defaults: function () {
