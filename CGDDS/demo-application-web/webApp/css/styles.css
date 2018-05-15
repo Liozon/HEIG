@@ -13,6 +13,10 @@ h2 {
     margin-bottom: 10px;
 }
 
+.hidden {
+    display: none;
+}
+
 /*----------CHAMPS DE RECHERCHE----------*/
 
 @keyframes form {
@@ -72,8 +76,10 @@ select:focus {
     right: 25%; 
 }
 
-.hidden {
-    display: none;
+.button {
+    text-align: center;
+    display: block;
+    margin: auto;
 }
 
 /*----------CHAMPS DE RESULTATS----------*/
@@ -168,7 +174,7 @@ body {
 /* ---- isotope ---- */
 
 .grid {
-    border: 1px solid #333;    
+       
 }
 
 /* clear fix */
