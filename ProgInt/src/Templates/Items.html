@@ -1,12 +1,18 @@
 <h1>Les dernières news</h1>
+<fieldset>
+    <input type="text" name="title" class="input_title">
+    <button class="btn_add">Add</button>
+</fieldset>
 {{#each items}}
-    <article class="item">
-      <h1>{{ title }}</h1>
-      <div class="body">
+<article class="item">
+    <h1>{{ title }}</h1>
+    <div class="body">
         {{ body }}
-      </div>
-      <footer>
-          Written by username
-      </footer>
-    </article>
+    </div>
+    <footer>
+        Written by username
+        <button class="btn_delete" data-index="{{@index}}">
+          Delete</button>
+    </footer>
+</article>
 {{/each}}
