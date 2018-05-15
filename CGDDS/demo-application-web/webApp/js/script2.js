@@ -1,9 +1,8 @@
 $(function () {
-    searchButton();
-    $("#submitButton").click(updateSubmitValue);
-    //capitalizeFirstLetter();
-    //changeEmptyElement();
-    //updateDropdown();
+    //searchButton();
+    //$("#submitButton").click(updateSubmitValue);
+    capitalizeFirstLetter();
+    changeEmptyElement();
 });
 
 function searchButton() {
@@ -38,12 +37,4 @@ function capitalizeFirstLetter() {
 function changeEmptyElement() {
     $("option").eq(1).text("(Sans catégorie)");
     //console.log("changeEmptyElement done");
-}
-
-function updateDropdown() {
-    //var value = $(".dropdown").val();
-    $(".dropdown1").change(function () {
-        $(".dropdown2").addClass("hidden");
-        $(".dropdown3").removeClass("hidden");
-    });
 }
