@@ -26,6 +26,7 @@ h2 {
     }
 }
 
+/*
 form {
     position: relative;
     width: 500px;
@@ -41,6 +42,7 @@ form {
     animation-name: form;
     animation-iteration-count: 1;
 }
+*/
 
 select,
 option {
@@ -68,6 +70,10 @@ select:focus {
     bottom: 0;
     left: 25%;
     right: 25%; 
+}
+
+.hidden {
+    display: none;
 }
 
 /*----------CHAMPS DE RESULTATS----------*/

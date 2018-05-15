@@ -101,7 +101,7 @@ return
 <html lang="fr">
 	<head>
 		<meta charset="utf-8" />
-		<title>Baechli - Recherche d'article</title>
+		<title>Baechli - Recherche d'articles</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="./js/isotope.pkgd.min.js"></script>
 		<script src="./js/script.js"></script>
@@ -111,10 +111,10 @@ return
 	<body>
 		<h1>Baechli - Recherche d'article</h1>
 		<h2>Catégories de recherche:</h2>
-		<div id="champs-recherche">
+		<form id="champs-recherche" action="" method="get">
 		<div id="category">
 				<label for="categoryList">Catégorie:</label>
-				<select class="custom-select" id="categoryList" name="category">
+				<select class="dropdown dropdown1 custom-select" id="categoryList" name="category">
 					<option value="">Choisir une catégorie...</option>
     {
         for $category in distinct-values($collection//category)
@@ -132,7 +132,7 @@ return
 		<div id="brand">
 			<p>
 				<label for="brandList">Marque:</label>
-				<select id="brandList" name="brand">
+				<select class="dropdown dropdown2" id="brandList" name="brand">
 					<option value="">Choisir une marque...</option>
     {
         for $brand in distinct-values($collection//brand)
@@ -151,7 +151,7 @@ return
 			<div>
 			<input class="button" id="submitButton" name="submit" type="submit" value="Rechercher"/>
 		</div>
-		</div>
+		</form>
 		<div class="result">
 		<h2>Trier par</h2>
 		<div id="sorts" class="button-group">
