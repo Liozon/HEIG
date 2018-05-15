@@ -89,7 +89,7 @@ eval("/* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_ARR
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \".item h1 {\\n    color: tomato;\\n}\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/Styles/Item.css?./node_modules/css-loader");
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \".item h1 {\\n    color: tomato;\\n}\\n.item.itemFirst h1 {\\n    color: blue;\\n}\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/Styles/Item.css?./node_modules/css-loader");
 
 /***/ }),
 
@@ -409,15 +409,15 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(f
 
 /***/ }),
 
-/***/ "./src/Models/Menu.js":
-/*!****************************!*\
-  !*** ./src/Models/Menu.js ***!
-  \****************************/
+/***/ "./src/Models/Items.js":
+/*!*****************************!*\
+  !*** ./src/Models/Items.js ***!
+  \*****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (Backbone.Model.extend({\n    defaults: { //Pas besoin de fonction car on a rien de dynamique, que du statique       \n        entries: [\n            {\n                label: \"Accueil\",\n                url: \"#accueil\"\n\n                }, {\n                label: \"Contact\",\n                url: \"#contact\"\n                }, {\n                label: \"Info\",\n                url: \"#info\"\n                }\n        ]\n    },\n    addEntry: function (entry) {\n        this.get(\"entries\").push(entry);\n        this.trigger(\"change\");\n    }\n}));\n\n//# sourceURL=webpack:///./src/Models/Menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var Models_Item__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Models/Item */ \"./src/Models/Item.js\");\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Backbone.Collection.extend({\n    model: Models_Item__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n}));\n\n//# sourceURL=webpack:///./src/Models/Items.js?");
 
 /***/ }),
 
@@ -432,60 +432,26 @@ eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader!./I
 
 /***/ }),
 
-/***/ "./src/Templates/Item.html":
-/*!*********************************!*\
-  !*** ./src/Templates/Item.html ***!
-  \*********************************/
+/***/ "./src/Templates/Items.html":
+/*!**********************************!*\
+  !*** ./src/Templates/Items.html ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var Handlebars = __webpack_require__(/*! ./node_modules/handlebars/runtime.js */ \"./node_modules/handlebars/runtime.js\");\nfunction __default(obj) { return obj && (obj.__esModule ? obj[\"default\"] : obj); }\nmodule.exports = (Handlebars[\"default\"] || Handlebars).template({\"compiler\":[7,\">= 4.0.0\"],\"main\":function(container,depth0,helpers,partials,data) {\n    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3=\"function\", alias4=container.escapeExpression;\n\n  return \"<article class=\\\"item\\\">\\r\\n  <h1>\"\n    + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\"name\":\"title\",\"hash\":{},\"data\":data}) : helper)))\n    + \"</h1>\\r\\n  <div class=\\\"body\\\">\\r\\n    \"\n    + alias4(((helper = (helper = helpers.body || (depth0 != null ? depth0.body : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\"name\":\"body\",\"hash\":{},\"data\":data}) : helper)))\n    + \"\\r\\n  </div>\\r\\n  <footer>\\r\\n      Written by username\\r\\n  </footer>\\r\\n</article>\";\n},\"useData\":true});\n\n//# sourceURL=webpack:///./src/Templates/Item.html?");
+eval("var Handlebars = __webpack_require__(/*! ./node_modules/handlebars/runtime.js */ \"./node_modules/handlebars/runtime.js\");\nfunction __default(obj) { return obj && (obj.__esModule ? obj[\"default\"] : obj); }\nmodule.exports = (Handlebars[\"default\"] || Handlebars).template({\"1\":function(container,depth0,helpers,partials,data) {\n    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3=\"function\", alias4=container.escapeExpression;\n\n  return \"    <article class=\\\"item\\\">\\r\\n      <h1>\"\n    + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\"name\":\"title\",\"hash\":{},\"data\":data}) : helper)))\n    + \"</h1>\\r\\n      <div class=\\\"body\\\">\\r\\n        \"\n    + alias4(((helper = (helper = helpers.body || (depth0 != null ? depth0.body : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\"name\":\"body\",\"hash\":{},\"data\":data}) : helper)))\n    + \"\\r\\n      </div>\\r\\n      <footer>\\r\\n          Written by username\\r\\n      </footer>\\r\\n    </article>\\r\\n\";\n},\"compiler\":[7,\">= 4.0.0\"],\"main\":function(container,depth0,helpers,partials,data) {\n    var stack1;\n\n  return \"<h1>Les dernières news</h1>\\r\\n\"\n    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.items : depth0),{\"name\":\"each\",\"hash\":{},\"fn\":container.program(1, data, 0),\"inverse\":container.noop,\"data\":data})) != null ? stack1 : \"\");\n},\"useData\":true});\n\n//# sourceURL=webpack:///./src/Templates/Items.html?");
 
 /***/ }),
 
-/***/ "./src/Templates/ItemFirst.html":
-/*!**************************************!*\
-  !*** ./src/Templates/ItemFirst.html ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("var Handlebars = __webpack_require__(/*! ./node_modules/handlebars/runtime.js */ \"./node_modules/handlebars/runtime.js\");\nfunction __default(obj) { return obj && (obj.__esModule ? obj[\"default\"] : obj); }\nmodule.exports = (Handlebars[\"default\"] || Handlebars).template({\"compiler\":[7,\">= 4.0.0\"],\"main\":function(container,depth0,helpers,partials,data) {\n    var helper;\n\n  return \"<article class=\\\"item\\\">\\r\\n  <hr>  \\r\\n  <h1>\"\n    + container.escapeExpression(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === \"function\" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{\"name\":\"title\",\"hash\":{},\"data\":data}) : helper)))\n    + \"</h1> \\r\\n  <hr>\\r\\n</article>\";\n},\"useData\":true});\n\n//# sourceURL=webpack:///./src/Templates/ItemFirst.html?");
-
-/***/ }),
-
-/***/ "./src/Templates/Menu.html":
-/*!*********************************!*\
-  !*** ./src/Templates/Menu.html ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("var Handlebars = __webpack_require__(/*! ./node_modules/handlebars/runtime.js */ \"./node_modules/handlebars/runtime.js\");\nfunction __default(obj) { return obj && (obj.__esModule ? obj[\"default\"] : obj); }\nmodule.exports = (Handlebars[\"default\"] || Handlebars).template({\"1\":function(container,depth0,helpers,partials,data) {\n    return \"    <li>\\r\\n        test\\r\\n    </li>\\r\\n\";\n},\"compiler\":[7,\">= 4.0.0\"],\"main\":function(container,depth0,helpers,partials,data) {\n    var stack1;\n\n  return \"<ul class=\\\"menu\\\">\\r\\n\"\n    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.entries : depth0),{\"name\":\"each\",\"hash\":{},\"fn\":container.program(1, data, 0),\"inverse\":container.noop,\"data\":data})) != null ? stack1 : \"\")\n    + \"</ul>\";\n},\"useData\":true});\n\n//# sourceURL=webpack:///./src/Templates/Menu.html?");
-
-/***/ }),
-
-/***/ "./src/Views/Item.js":
-/*!***************************!*\
-  !*** ./src/Views/Item.js ***!
-  \***************************/
+/***/ "./src/Views/Items.js":
+/*!****************************!*\
+  !*** ./src/Views/Items.js ***!
+  \****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var Templates_Item_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Templates/Item.html */ \"./src/Templates/Item.html\");\n/* harmony import */ var Templates_Item_html__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(Templates_Item_html__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var Styles_Item_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Styles/Item.css */ \"./src/Styles/Item.css\");\n/* harmony import */ var Styles_Item_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(Styles_Item_css__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Backbone.View.extend({\n\n  initialize: function(attrs, options) {\n    this.template =  attrs.template || Templates_Item_html__WEBPACK_IMPORTED_MODULE_0___default.a;\n    this.listenTo(this.model, \"change\", this.render);     \n  },\n\n  render: function() {      \n      this.$el.html(this.template(this.model.attributes));\n      return this.$el; \n  }\n\n}));\n\n//# sourceURL=webpack:///./src/Views/Item.js?");
-
-/***/ }),
-
-/***/ "./src/Views/Menu.js":
-/*!***************************!*\
-  !*** ./src/Views/Menu.js ***!
-  \***************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var Templates_Menu_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Templates/Menu.html */ \"./src/Templates/Menu.html\");\n/* harmony import */ var Templates_Menu_html__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(Templates_Menu_html__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var Styles_Item_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Styles/Item.css */ \"./src/Styles/Item.css\");\n/* harmony import */ var Styles_Item_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(Styles_Item_css__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Backbone.View.extend({\n\n  initialize: function(attrs, options) {\n    this.template =  attrs.template || Templates_Menu_html__WEBPACK_IMPORTED_MODULE_0___default.a;\n    this.listenTo(this.model, \"change\", this.render);     \n  },\n\n  render: function() {      \n      this.$el.html(this.template(this.model.attributes));\n      return this.$el; \n  }\n\n}));\n\n//# sourceURL=webpack:///./src/Views/Menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var Templates_Items_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Templates/Items.html */ \"./src/Templates/Items.html\");\n/* harmony import */ var Templates_Items_html__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(Templates_Items_html__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var Styles_Item_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Styles/Item.css */ \"./src/Styles/Item.css\");\n/* harmony import */ var Styles_Item_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(Styles_Item_css__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Backbone.View.extend({\n\n  initialize: function(attrs, options) {\n    this.template =  attrs.template || Templates_Items_html__WEBPACK_IMPORTED_MODULE_0___default.a;\n    this.listenTo(this.collection, \"change add remove\", this.render);     \n  },\n\n  render: function() {      \n      this.$el.html(this.template({\n          items: this.collection.toJSON()\n      }));\n      return this.$el; \n  }\n\n}));\n\n//# sourceURL=webpack:///./src/Views/Items.js?");
 
 /***/ }),
 
@@ -497,7 +463,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var Temp
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var Backbone__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Backbone */ \"./node_modules/Backbone/backbone.js\");\n/* harmony import */ var Backbone__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(Backbone__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var Models_Item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Models/Item */ \"./src/Models/Item.js\");\n/* harmony import */ var Models_Menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Models/Menu */ \"./src/Models/Menu.js\");\n/* harmony import */ var Views_Item__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Views/Item */ \"./src/Views/Item.js\");\n/* harmony import */ var Views_Menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Views/Menu */ \"./src/Views/Menu.js\");\n/* harmony import */ var Templates_Item_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Templates/Item.html */ \"./src/Templates/Item.html\");\n/* harmony import */ var Templates_Item_html__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(Templates_Item_html__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var Templates_ItemFirst_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Templates/ItemFirst.html */ \"./src/Templates/ItemFirst.html\");\n/* harmony import */ var Templates_ItemFirst_html__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(Templates_ItemFirst_html__WEBPACK_IMPORTED_MODULE_6__);\n\n\n\n\n\n\n\n\nvar menu = new Models_Menu__WEBPACK_IMPORTED_MODULE_2__[\"default\"];\nvar vMenu = new Views_Menu__WEBPACK_IMPORTED_MODULE_4__[\"default\"];\nconsole.log(menu.attributes);\n\nvar m1 = new Models_Item__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({\n    title: \"Ceçi est un titre\",\n    body: \"TRUC\"\n});\nvar m2 = new Models_Item__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({\n    title: \"Ceçi est un titre 2\"\n});\n\nvar v1 = new Views_Item__WEBPACK_IMPORTED_MODULE_3__[\"default\"]({\n    model: m1,\n    template: Templates_ItemFirst_html__WEBPACK_IMPORTED_MODULE_6___default.a\n});\nvar v2 = new Views_Item__WEBPACK_IMPORTED_MODULE_3__[\"default\"]({\n    model: m2\n});\n\n$(function () { // attendre que le DOM soit OK\n    v1.render().appendTo(\"#articles\");\n    v2.render().appendTo(\"#articles\");\n    vMenu.render().appendTo(\"#mainNav\");\n    setTimeout(function () {\n        m1.set({\n            title: \"test!!\"\n        });\n        m2.set({\n            title: \"nouveau test!!\"\n        });\n        menu.addEntry({label: 'Admin', url: '#admin'});\n    }, 2000);\n})\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var Backbone__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Backbone */ \"./node_modules/Backbone/backbone.js\");\n/* harmony import */ var Backbone__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(Backbone__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var Models_Items__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Models/Items */ \"./src/Models/Items.js\");\n/* harmony import */ var Views_Items__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Views/Items */ \"./src/Views/Items.js\");\n\n\n\n\nvar items = new Models_Items__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\n\nitems.add([\n  {title: \"Flying Dutchman\"},\n  {title: \"Black Pearl\"}\n]);\n\n$(function () {\n    let viewItems = new Views_Items__WEBPACK_IMPORTED_MODULE_2__[\"default\"]({collection: items});\n    viewItems.render().appendTo(\"#articles\");\n    setTimeout(function () {\n        items.at(0).set({title: 'nouveau titre'});\n    }, 2000); \n    setTimeout(function () {\n        items.add({title: 'nouveau titre article'});\n    }, 4000); \n})\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 

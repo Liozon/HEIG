@@ -1,42 +1,21 @@
 import Backbone from "Backbone";
-import ModelItem from "Models/Item";
-import ModelMenu from "Models/Menu";
-import ViewItem from "Views/Item";
-import ViewMenu from "Views/Menu";
-import tmplItem from "Templates/Item.html";
-import tmplItemFirst from "Templates/ItemFirst.html";
+import ModelItems from "Models/Items";
+import ViewItems from "Views/Items";
 
-var menu = new ModelMenu;
-var vMenu = new ViewMenu;
-console.log(menu.attributes);
+var items = new ModelItems();
 
-var m1 = new ModelItem({
-    title: "Ceçi est un titre",
-    body: "TRUC"
-});
-var m2 = new ModelItem({
-    title: "Ceçi est un titre 2"
-});
+items.add([
+  {title: "Flying Dutchman"},
+  {title: "Black Pearl"}
+]);
 
-var v1 = new ViewItem({
-    model: m1,
-    template: tmplItemFirst
-});
-var v2 = new ViewItem({
-    model: m2
-});
-
-$(function () { // attendre que le DOM soit OK
-    v1.render().appendTo("#articles");
-    v2.render().appendTo("#articles");
-    vMenu.render().appendTo("#mainNav");
+$(function () {
+    let viewItems = new ViewItems({collection: items});
+    viewItems.render().appendTo("#articles");
     setTimeout(function () {
-        m1.set({
-            title: "test!!"
-        });
-        m2.set({
-            title: "nouveau test!!"
-        });
-        menu.addEntry({label: 'Admin', url: '#admin'});
-    }, 2000);
+        items.at(0).set({title: 'nouveau titre'});
+    }, 2000); 
+    setTimeout(function () {
+        items.add({title: 'nouveau titre article'});
+    }, 4000); 
 })

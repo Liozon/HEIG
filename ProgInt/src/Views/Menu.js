@@ -1,5 +1,4 @@
 import tmplDefault from "Templates/Menu.html";
-import "Styles/Item.css";
 
 export default Backbone.View.extend({
 
@@ -8,7 +7,7 @@ export default Backbone.View.extend({
     this.listenTo(this.model, "change", this.render);     
   },
 
-  render: function() {      
+  render: function() {                 
       this.$el.html(this.template(this.model.attributes));
       return this.$el; 
   }

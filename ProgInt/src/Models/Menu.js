@@ -1,17 +1,16 @@
-export default Backbone.Model.extend({
-    defaults: { //Pas besoin de fonction car on a rien de dynamique, que du statique       
+export default Backbone.Model.extend({    
+    defaults: {
         entries: [
             {
                 label: "Accueil",
                 url: "#accueil"
-
-                }, {
-                label: "Contact",
-                url: "#contact"
-                }, {
+            }, {
                 label: "Info",
                 url: "#info"
-                }
+            }, {
+                label: "Contacts",
+                url: "#contacts"
+            }
         ]
     },
     addEntry: function (entry) {
