@@ -101,17 +101,20 @@ return
 <html lang="fr">
 	<head>
 		<meta charset="utf-8" />
-		<title>Baechli - Recherche d'articles</title>
+		<title>Recherche d'articles - Baechli</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="./js/isotope.pkgd.min.js"></script>
 		<script src="./js/script.js"></script>
 		<script src="./js/script2.js"></script>
 		<link rel="stylesheet" media="screen" type="text/css" href="css/styles.css" />
-		<link rel="icon" href="img/favicon.ico" />
+		<link rel="icon" type="image/png" href="img/favicon.png" />
+		<!--[if IE]><link rel="shortcut icon" href="img/favicon.ico"><![endif]-->
 	</head>
 	<body>
-		<h1>Baechli - Recherche d'article</h1>
-		<h2>Catégories de recherche:</h2>
+	    <div class="header">
+	        <img src="img/logo.png" alt="Logo Baechli" />
+		</div>
+		<h2 class="title1">Catégories de recherche</h2>
 		<form id="champs-recherche" action="" method="get">
 		<div id="category">
 				<label for="categoryList">Catégorie:</label>

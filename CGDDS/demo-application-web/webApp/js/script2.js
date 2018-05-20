@@ -4,6 +4,7 @@ $(function () {
     capitalizeFirstLetter();
     changeEmptyElement();
     showResults();
+    alignGrid();
 });
 
 function searchButton() {
@@ -45,4 +46,14 @@ function showResults() {
         $(".result").removeClass("hidden");
         $(".is-checked").click();
     }
+}
+
+function alignGrid() {
+    $('.grid').isotope({
+        itemSelector: '.element-item',
+        masonry: {
+            columnWidth: 200,
+            isFitWidth: true
+        }
+    });
 }

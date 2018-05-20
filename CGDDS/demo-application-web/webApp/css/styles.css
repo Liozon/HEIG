@@ -17,6 +17,25 @@ h2 {
     display: none;
 }
 
+.header img {
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 123px;
+    height: 104px;
+}
+
+.header h1 {
+    position: relative;
+    top: 30px;
+    left: 10px;
+}
+
+.title1 {
+    margin-top: 1%;
+}
+
 /*----------CHAMPS DE RECHERCHE----------*/
 
 @keyframes form {
@@ -73,7 +92,7 @@ select:focus {
     top: 0;
     bottom: 0;
     left: 25%;
-    right: 25%; 
+    right: 25%;
 }
 
 .button {
@@ -97,6 +116,14 @@ table {
     width: 100%;
 }
 */
+
+/*----------CHAMPS DE FILTRES / RESULTATS----------*/
+
+.button-group {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 
 /*----------ISOTOPE----------*/
 
@@ -174,7 +201,7 @@ body {
 /* ---- isotope ---- */
 
 .grid {
-       
+    margin: 0 auto;
 }
 
 /* clear fix */
