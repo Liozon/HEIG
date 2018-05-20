@@ -107,6 +107,7 @@ return
 		<script src="./js/script.js"></script>
 		<script src="./js/script2.js"></script>
 		<link rel="stylesheet" media="screen" type="text/css" href="css/styles.css" />
+		<link rel="icon" href="img/favicon.ico" />
 	</head>
 	<body>
 		<h1>Baechli - Recherche d'article</h1>
