@@ -27,7 +27,6 @@ select {
 
 .title1 {
     margin-top: 1%;
-
 }
 
 img {
@@ -35,6 +34,7 @@ img {
     float: left;
     margin-left: auto;
     margin-right: 20px;
+    margin-bottom: 200px;
     width: 20%;
 }
 
@@ -51,8 +51,16 @@ dt {
     font-weight: bold;
 }
 
+dt:first-letter {
+    text-transform: uppercase;
+}
+
 dd {
     padding-bottom: 10px;
+}
+
+dd:first-letter {
+    text-transform: uppercase;
 }
 
 .price::before {
@@ -67,14 +75,14 @@ dd {
     img {
         display: block;
         margin: 0 auto;
-        float:none;
+        float: none;
         width: 30%;
     }
 
     .category {
         margin-top: 20px;
     }
-    
+
     dd {
         margin-top: 5px;
     }
@@ -83,35 +91,36 @@ dd {
 /*----------FONTS----------*/
 
 @import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=4ccdc432-2395-453a-bdb3-7016b91a667d");
+
 @font-face {
     font-family: "DIN Next W01 Light";
-    src: url("/fonts/3e0b2cd7-9657-438b-b4af-e04122e8f1f7.eot?#iefix");
-    src: url("/fonts/3e0b2cd7-9657-438b-b4af-e04122e8f1f7.eot?#iefix") format("eot"), url("/fonts/de1216be-00c2-43c0-9c45-3e7f925eb519.woff2") format("woff2"), url("/fonts/bc176270-17fa-4c78-a343-9fe52824e501.woff") format("woff"), url("/fonts/3516f91d-ac48-42cd-acfe-1be691152cc4.ttf") format("truetype"), url("/fonts/d1b1e866-a411-42ba-8f75-72bf28e23694.svg#d1b1e866-a411-42ba-8f75-72bf28e23694") format("svg");
+    src: url("../fonts/3e0b2cd7-9657-438b-b4af-e04122e8f1f7.eot?#iefix");
+    src: url("../fonts/3e0b2cd7-9657-438b-b4af-e04122e8f1f7.eot?#iefix") format("eot"), url("../fonts/de1216be-00c2-43c0-9c45-3e7f925eb519.woff2") format("woff2"), url("../fonts/bc176270-17fa-4c78-a343-9fe52824e501.woff") format("woff"), url("../fonts/3516f91d-ac48-42cd-acfe-1be691152cc4.ttf") format("truetype"), url("../fonts/d1b1e866-a411-42ba-8f75-72bf28e23694.svg#d1b1e866-a411-42ba-8f75-72bf28e23694") format("svg");
 }
 
 @font-face {
     font-family: "DIN Next W01 Medium";
-    src: url("/fonts/324dee78-6585-4c13-8ca3-5817cc600d84.eot?#iefix");
-    src: url("/fonts/324dee78-6585-4c13-8ca3-5817cc600d84.eot?#iefix") format("eot"), url("/fonts/be607c9f-3c81-41b4-b7ad-17af005c80bb.woff2") format("woff2"), url("/fonts/4bf0ead4-e61b-4992-832b-6ff05828d99f.woff") format("woff"), url("/fonts/73713a0b-8f6a-4c4e-b8a8-7cf238e632f6.ttf") format("truetype"), url("/fonts/b90b6bdf-15e2-4544-9fe0-92c79fff0ecd.svg#b90b6bdf-15e2-4544-9fe0-92c79fff0ecd") format("svg");
+    src: url("../fonts/324dee78-6585-4c13-8ca3-5817cc600d84.eot?#iefix");
+    src: url("../fonts/324dee78-6585-4c13-8ca3-5817cc600d84.eot?#iefix") format("eot"), url("../fonts/be607c9f-3c81-41b4-b7ad-17af005c80bb.woff2") format("woff2"), url("../fonts/4bf0ead4-e61b-4992-832b-6ff05828d99f.woff") format("woff"), url("../fonts/73713a0b-8f6a-4c4e-b8a8-7cf238e632f6.ttf") format("truetype"), url("../fonts/b90b6bdf-15e2-4544-9fe0-92c79fff0ecd.svg#b90b6bdf-15e2-4544-9fe0-92c79fff0ecd") format("svg");
 }
 
 @font-face {
     font-family: "DIN Next W01 Bold";
-    src: url("/fonts/b32ab78b-6c51-4bd3-bc37-4edcec0331f8.eot?#iefix");
-    src: url("/fonts/b32ab78b-6c51-4bd3-bc37-4edcec0331f8.eot?#iefix") format("eot"), url("/fonts/121784c1-863c-4e49-b682-625ea7de55b0.woff2") format("woff2"), url("/fonts/9949035f-6226-4080-a14a-bf7d94ffb1e1.woff") format("woff"), url("/fonts/6241bd09-15c2-485e-9796-9db8d0aa6974.ttf") format("truetype"), url("/fonts/af94da3e-4232-416a-b6bc-f39f85dd5db6.svg#af94da3e-4232-416a-b6bc-f39f85dd5db6") format("svg");
+    src: url("../fonts/b32ab78b-6c51-4bd3-bc37-4edcec0331f8.eot?#iefix");
+    src: url("../fonts/b32ab78b-6c51-4bd3-bc37-4edcec0331f8.eot?#iefix") format("eot"), url("../fonts/121784c1-863c-4e49-b682-625ea7de55b0.woff2") format("woff2"), url("../fonts/9949035f-6226-4080-a14a-bf7d94ffb1e1.woff") format("woff"), url("../fonts/6241bd09-15c2-485e-9796-9db8d0aa6974.ttf") format("truetype"), url("../fonts/af94da3e-4232-416a-b6bc-f39f85dd5db6.svg#af94da3e-4232-416a-b6bc-f39f85dd5db6") format("svg");
 }
 
 @font-face {
     font-family: "DIN Next W01 Light";
-    src: url("/fonts/DINWeb-Light.woff") format("woff");
+    src: url("../fonts/DINWeb-Light.woff") format("woff");
 }
 
 @font-face {
     font-family: "DIN Next W01 Medium";
-    src: url("/fonts/DINWeb-Medium.woff") format("woff");
+    src: url("../fonts/DINWeb-Medium.woff") format("woff");
 }
 
 @font-face {
     font-family: "DIN Next W01 Bold";
-    src: url("/fonts/DINWeb-Bold.woff") format("woff");
+    src: url("../fonts/DINWeb-Bold.woff") format("woff");
 }

@@ -13,6 +13,8 @@ return
         <head>
             <meta charset="utf-8"/>
             <title>{data($product/data/name)} - Bächli</title>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		    <script src="./js/overlay.js"></script>
             <link rel="stylesheet" media="screen" type="text/css" href="css/overlay.css" />
         </head>
 		<body>
@@ -28,7 +30,7 @@ return
 					<dl class="clearfix">
 					    <div><img src="http://localhost:8080/exist/rest{replace(util:collection-name($product), 'xmlDocuments', 'illustrations')}/{data($product/data/imageId)}.jpeg" onerror='this.onerror=null; this.src="http://localhost:8080/exist/rest{replace(util:collection-name($product), 'xmlDocuments', 'illustrations')}/{data($product/data/imageId)}.jpg"' alt="{data($product/data/name)}" /></div>
 						<dt class="category">Catégorie</dt>
-						<dd>{data($product/data/category)}</dd>
+						<dd class="dd">{data($product/data/category)}</dd>
 						<dt>Marque</dt>
 						<dd>{data($product/data/brand)}</dd>
 						<dt>Description</dt>

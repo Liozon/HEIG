@@ -41,7 +41,7 @@ declare function local:showResults($collection, $category, $brand)
             <a data-fancybox="" data-type="iframe" data-src="show-product.xql?product={ util:collection-name($product) }/{ util:document-name($product) }" href="javascript:;">
             <div class="element-item" data-category="post-transition">
             <h3 class="name">{ data($product/data/name) }</h3>
-            <img src="http://localhost:8080/exist/rest{replace(util:collection-name($product), 'xmlDocuments', 'illustrations')}/{ data($product/data/imageId) }.jpg" onerror='this.onerror=null; this.src="http://localhost:8080/exist/rest{replace(util:collection-name($product), 'xmlDocuments', 'illustrations')}/{data($product/data/imageId)}.jpeg"' alt="{data($product/data/name)}" width = "120" height="120" />
+            <img src="http://localhost:8080/exist/rest{replace(util:collection-name($product), 'xmlDocuments', 'illustrations')}/{ data($product/data/imageId) }.jpeg" onerror='this.onerror=null; this.src="http://localhost:8080/exist/rest{replace(util:collection-name($product), 'xmlDocuments', 'illustrations')}/{data($product/data/imageId)}.jpg"' alt="{data($product/data/name)}" width = "120" height="120" />
                    <p class="category">{ data($product/data/category) }</p>
                    <p class="brand">{ data($product/data/brand) }</p>
                    <p class="currency">{ data($product/data/variation/price/@currency) }</p>
@@ -67,7 +67,6 @@ return
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="./js/isotope.pkgd.min.js"></script>
 		<script src="./js/script.js"></script>
-		<script src="./js/script2.js"></script>
 		<script src="./js/jquery.fancybox.min.js"></script>
 		<link rel="stylesheet" media="screen" type="text/css" href="./css/styles.css" />
 		<link rel="stylesheet" type="text/css" href="./css/jquery.fancybox.min.css"/>
