@@ -77,7 +77,8 @@ return
             <div class="header">
 	        <img src="img/logo.png" alt="Logo Bächli" />
 		    </div>
-            <h2 class="title1">Recherche d'articles</h2>
+            <h1 class="title1">Recherche d'articles</h1>
+            <h2>Filtrer par</h2>
             <form id="champs-recherche" action="" method="get">
             <div id="category">
                 <label for="categoryList">Catégorie:</label>

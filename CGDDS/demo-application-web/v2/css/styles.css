@@ -12,6 +12,8 @@ body {
 
 h1 {
     font-family: "DIN Next W01 Bold", Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 h2 {
