@@ -26,7 +26,7 @@ return
 				</div>
 				<hr/>
 				<div id="product">
-					<h2 class="productname">Produit: {data($product/data/name)}</h2>
+					<h2 class="productname">{data($product/data/name)}</h2>
 					<dl class="clearfix">
 					    <div><img src="http://localhost:8080/exist/rest{replace(util:collection-name($product), 'xmlDocuments', 'illustrations')}/{data($product/data/imageId)}.jpeg" onerror='this.onerror=null; this.src="http://localhost:8080/exist/rest{replace(util:collection-name($product), 'xmlDocuments', 'illustrations')}/{data($product/data/imageId)}.jpg"' alt="{data($product/data/name)}" /></div>
 						<dt class="category">Catégorie</dt>

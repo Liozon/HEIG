@@ -12,7 +12,6 @@ body {
 h2 {
     text-align: left;
     margin-bottom: 10px;
-    font-family: "DIN Next W01 Light", Arial, sans-serif;
 }
 
 label,
@@ -44,6 +43,14 @@ hr {
     border-top: 1px solid #ccc;
     margin: 1em 0;
     padding: 0;
+}
+
+.productname:first-letter {
+    text-transform: uppercase;
+}
+
+.productname::before {
+    content: "Produit: ";
 }
 
 dt {
