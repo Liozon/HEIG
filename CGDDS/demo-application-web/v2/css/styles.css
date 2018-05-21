@@ -6,8 +6,7 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
-    /*cache la scrollbar*/
+    overflow-x: hidden; /*Hide scroll bar*/
 }
 
 h1 {
