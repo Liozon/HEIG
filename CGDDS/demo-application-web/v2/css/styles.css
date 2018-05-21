@@ -6,7 +6,7 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
-    overflow-x: hidden; /*Hide scroll bar*/
+    overflow-x: hidden; /*Hide scrollbar*/
 }
 
 h1 {
@@ -22,12 +22,13 @@ h2 {
 }
 
 label {
-    font-family: "DIN Next W01 Bold", Arial, sans-serif;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
     font-size: 15px;
 }
 
 select {
-    font-family: "DIN Next W01 Medium", Arial, sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: 15px;
 }
 
@@ -184,7 +185,8 @@ body {
     font-size: 18px;
     text-shadow: 0 1px white;
     cursor: pointer;
-    font-family: "DIN Next W01 Medium", Arial, sans-serif;
+    font-family: Roboto, sans-serif;
+    color: black;
 }
 
 .button:hover {

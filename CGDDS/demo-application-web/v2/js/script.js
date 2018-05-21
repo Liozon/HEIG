@@ -66,7 +66,7 @@ $(function () {
     showResults();
     overlay();
     textUpperCase();
-    console.log("Custom's scripts loaded")
+    console.log("Custom's scripts loaded");
 });
 
 function searchButton() {
@@ -112,6 +112,8 @@ function showResults() {
 
 function overlay() {
     $("[data-fancybox]").fancybox({
+        animationEffect: "zoom-in-out",
+        animationDuration: 366,
         iframe: {
             preload: false
         }
