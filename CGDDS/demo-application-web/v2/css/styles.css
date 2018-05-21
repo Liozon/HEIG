@@ -1,0 +1,448 @@
+/*----------GÉNÉRAL----------*/
+
+html {
+    background: white;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    /*cache la scrollbar*/
+}
+
+h1 {
+    font-family: "DIN Next W01 Bold", Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: "DIN Next W01 Light", Arial, sans-serif;
+}
+
+label {
+    font-family: "DIN Next W01 Bold", Arial, sans-serif;
+    font-size: 15px;
+}
+
+select {
+    font-family: "DIN Next W01 Medium", Arial, sans-serif;
+    font-size: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+.header img {
+    display: block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 123px;
+    height: 104px;
+}
+
+.header h1 {
+    position: relative;
+    top: 30px;
+    left: 10px;
+}
+
+.title1 {
+    margin-top: 1%;
+
+}
+
+/*h2.sortby {
+    text-align: left;
+}*/
+
+/*----------CHAMPS DE RECHERCHE----------*/
+
+@keyframes form {
+    0% {
+        opacity: 0;
+        bottom: 50px;
+    }
+    100% {
+        opacity: 100;
+        bottom: 0px;
+    }
+}
+
+/**form {
+    position: relative;
+    width: 500px;
+    height: 440px;
+    background: #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: auto;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    position: relative;
+    animation-name: form;
+    animation-iteration-count: 1;
+}**/
+
+select,
+option {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    transition: all 0.3s;
+    border-bottom: 2px solid #fce5e8;
+    margin-bottom: 12px;
+    transition: border-bottom 0.4s ease-in-out;
+}
+
+select:focus {
+    border-bottom: 2px solid #E1001E;
+}
+
+#champs-recherche {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 25%;
+    right: 25%;
+}
+
+.button {
+    text-align: center;
+    display: block;
+    margin: auto;
+    font-family: "DIN Next W01 Medium", Arial, sans-serif;
+}
+
+/*----------CHAMPS DE RESULTATS----------*/
+
+/*
+tr > td {
+    text-transform: lowercase;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2
+}
+
+table {
+    width: 100%;
+}
+*/
+
+/*----------CHAMPS DE FILTRES / RESULTATS----------*/
+
+.button-group {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.result {
+    margin-top: 3%;
+}
+
+.query {
+    font-family: "DIN Next W01 Light", Arial, sans-serif;
+    font-size: 15px;
+}
+
+.query::before {
+    content: "Requête: "
+}
+
+/*----------ISOTOPE----------*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* ---- button ---- */
+
+.button {
+    display: inline-block;
+    padding: 0.5em 1.0em;
+    background: #EEE;
+    border: none;
+    border-radius: 7px;
+    background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2));
+    color: #222;
+    font-family: sans-serif;
+    font-size: 18px;
+    text-shadow: 0 1px white;
+    cursor: pointer;
+    font-family: "DIN Next W01 Medium", Arial, sans-serif;
+}
+
+.button:hover {
+    background-color: #8CF;
+    text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+    color: #222;
+}
+
+.button:active,
+.button.is-checked {
+    background-color: #28F;
+}
+
+.button.is-checked {
+    color: white;
+    text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+}
+
+.button:active {
+    box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+}
+
+/* ---- button-group ---- */
+
+.button-group {
+    margin-bottom: 20px;
+}
+
+.button-group:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.button-group .button {
+    float: left;
+    border-radius: 0;
+    margin-left: 0;
+    margin-right: 1px;
+}
+
+.button-group .button:first-child {
+    border-radius: 0.5em 0 0 0.5em;
+}
+
+.button-group .button:last-child {
+    border-radius: 0 0.5em 0.5em 0;
+}
+
+/* ---- isotope ---- */
+
+.grid {
+    /*border: 1px solid #333;*/
+}
+
+/* clear fix */
+
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .element-item ---- */
+
+.element-item {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 200px;
+    margin: 5px;
+    padding: 10px;
+    border: 8px solid #DCDCDC;
+    color: black;
+}
+
+.element-item > * {
+    margin: 0;
+    padding: 0;
+}
+
+.element-item .price {
+    position: absolute;
+
+    top: 150px;
+    left: 215px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.element-item .currency {
+    position: absolute;
+
+    top: 150px;
+    left: 155px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.element-item .category {
+    position: absolute;
+
+    top: 10px;
+    left: 155px;
+    text-align: right;
+
+    font-size: 10px;
+    font-weight: normal;
+
+}
+
+.element-item .name {
+    position: absolute;
+
+    left: 155px;
+    top: 80px;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.element-item .brand {
+    position: absolute;
+
+    left: 155px;
+    top: 25px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.element-item .symbol {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+}
+
+.element-item .number {
+    position: absolute;
+    right: 8px;
+    top: 5px;
+}
+
+.element-item .weight {
+    position: absolute;
+    left: 10px;
+    top: 76px;
+    font-size: 12px;
+}
+
+.element-item img {
+    font-size: 10px;
+}
+
+
+.element-item.alkali {
+    background: #F00;
+    background: hsl( 0, 100%, 50%);
+}
+
+.element-item.alkaline-earth {
+    background: #F80;
+    background: hsl( 36, 100%, 50%);
+}
+
+.element-item.lanthanoid {
+    background: #FF0;
+    background: hsl( 72, 100%, 50%);
+}
+
+.element-item.actinoid {
+    background: #0F0;
+    background: hsl( 108, 100%, 50%);
+}
+
+.element-item.transition {
+    background: #0F8;
+    background: hsl( 144, 100%, 50%);
+}
+
+.element-item.post-transition {
+    background: #0FF;
+    background: hsl( 180, 100%, 50%);
+}
+
+.element-item.metalloid {
+    background: #08F;
+    background: hsl( 216, 100%, 50%);
+}
+
+.element-item.diatomic {
+    background: #00F;
+    background: hsl( 252, 100%, 50%);
+}
+
+.element-item.halogen {
+    background: #F0F;
+    background: hsl( 288, 100%, 50%);
+}
+
+.element-item.noble-gas {
+    background: #F08;
+    background: hsl( 324, 100%, 50%);
+}
+
+/*----------FONTS----------*/
+
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=4ccdc432-2395-453a-bdb3-7016b91a667d");
+
+@font-face {
+    font-family: "DIN Next W01 Light";
+    src: url("../fonts/3e0b2cd7-9657-438b-b4af-e04122e8f1f7.eot?#iefix");
+    src: url("../fonts/3e0b2cd7-9657-438b-b4af-e04122e8f1f7.eot?#iefix") format("eot"), url("../fonts/de1216be-00c2-43c0-9c45-3e7f925eb519.woff2") format("woff2"), url("../fonts/bc176270-17fa-4c78-a343-9fe52824e501.woff") format("woff"), url("../fonts/3516f91d-ac48-42cd-acfe-1be691152cc4.ttf") format("truetype"), url("../fonts/d1b1e866-a411-42ba-8f75-72bf28e23694.svg#d1b1e866-a411-42ba-8f75-72bf28e23694") format("svg");
+}
+
+@font-face {
+    font-family: "DIN Next W01 Medium";
+    src: url("../fonts/324dee78-6585-4c13-8ca3-5817cc600d84.eot?#iefix");
+    src: url("../fonts/324dee78-6585-4c13-8ca3-5817cc600d84.eot?#iefix") format("eot"), url("../fonts/be607c9f-3c81-41b4-b7ad-17af005c80bb.woff2") format("woff2"), url("../fonts/4bf0ead4-e61b-4992-832b-6ff05828d99f.woff") format("woff"), url("../fonts/73713a0b-8f6a-4c4e-b8a8-7cf238e632f6.ttf") format("truetype"), url("../fonts/b90b6bdf-15e2-4544-9fe0-92c79fff0ecd.svg#b90b6bdf-15e2-4544-9fe0-92c79fff0ecd") format("svg");
+}
+
+@font-face {
+    font-family: "DIN Next W01 Bold";
+    src: url("../fonts/b32ab78b-6c51-4bd3-bc37-4edcec0331f8.eot?#iefix");
+    src: url("../fonts/b32ab78b-6c51-4bd3-bc37-4edcec0331f8.eot?#iefix") format("eot"), url("../fonts/121784c1-863c-4e49-b682-625ea7de55b0.woff2") format("woff2"), url("../fonts/9949035f-6226-4080-a14a-bf7d94ffb1e1.woff") format("woff"), url("../fonts/6241bd09-15c2-485e-9796-9db8d0aa6974.ttf") format("truetype"), url("../fonts/af94da3e-4232-416a-b6bc-f39f85dd5db6.svg#af94da3e-4232-416a-b6bc-f39f85dd5db6") format("svg");
+}
+
+@font-face {
+    font-family: "DIN Next W01 Light";
+    src: url("../fonts/DINWeb-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "DIN Next W01 Medium";
+    src: url("../fonts/DINWeb-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "DIN Next W01 Bold";
+    src: url("../fonts/DINWeb-Bold.woff") format("woff");
+}
+
+/*----------OVERLAY----------*/
+
+.fancybox-slide--iframe .fancybox-content {
+	width  : 800px;
+	height : 2000px;
+	max-width  : 80%;
+	max-height : 100%;
+	margin: 0;
+}
+
+main {
+    background-color: red;
+}
