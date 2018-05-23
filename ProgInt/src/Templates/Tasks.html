@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-	<title>Title</title>
-	<meta charset="utf-8">
-	<script src="js/nomScript.js"></script>
-	<link rel="stylesheet" href="css/nomCss.css">
-    </head>
-    <body>
-	<h1>Ajouter une tâche:</h1>
-    </body>
-</html>
+<h1>Les dernières tâches</h1>
+{{#each items}}
+    <article class="task">
+      <h1>{{ task }}</h1>
+      <div class="body">
+        {{ body }}
+      </div>
+      <footer>
+          Written by {{time}}          
+          <button class="btn_delete btn" data-index="{{@index}}">
+              Effacer
+          </button>
+      </footer>
+    </article>
+{{/each}}
