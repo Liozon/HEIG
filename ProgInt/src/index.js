@@ -1,8 +1,10 @@
 import Backbone from "Backbone";
-import ModelItem from "Models/Item";
-//import ViewTasks from "Views/Tasks";
+import ModelTask from "Models/Task";
+import ViewTasks from "Views/Task";
 
-var item1 = new ModelItem({
+var task = new ModelTask();
+
+/*var item1 = new ModelItem({
     title: "item 1"
 });
 
@@ -12,4 +14,5 @@ var item2 = new ModelItem({
 
 
 console.log(item1.toJSON());
-console.log(item2.toJSON());
+console.log(item2.toJSON());*/
+
