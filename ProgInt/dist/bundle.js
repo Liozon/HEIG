@@ -126,6 +126,18 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 
 /***/ }),
 
+/***/ "./src/Models/Item.js":
+/*!****************************!*\
+  !*** ./src/Models/Item.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony default export */ __webpack_exports__[\"default\"] = (Backbone.Model.extend({\r\n\r\n    initialize: function (attrs, options) {\r\n\r\n    },\r\n\r\n    defaults: function () {\r\n        return {\r\n            \"createdAt\": $.now()\r\n        }\r\n    },\r\n\r\n    /*validate: function (attrs, options) {\r\n        if (attrs.onLoan == ) {\r\n            return \"can't end before it starts\";\r\n        }\r\n    }*/\r\n}));\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/Models/Item.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -134,7 +146,7 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var Backbone__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Backbone */ \"./node_modules/Backbone/backbone.js\");\n/* harmony import */ var Backbone__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(Backbone__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var Backbone__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Backbone */ \"./node_modules/Backbone/backbone.js\");\n/* harmony import */ var Backbone__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(Backbone__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var Models_Item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Models/Item */ \"./src/Models/Item.js\");\n\r\n\r\n//import ViewTasks from \"Views/Tasks\";\r\n\r\nvar item1 = new Models_Item__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({\r\n    title: \"item 1\"\r\n});\r\n\r\nvar item2 = new Models_Item__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({\r\n    title: \"item 2\"\r\n});\r\n\r\n\r\nconsole.log(item1.toJSON());\r\nconsole.log(item2.toJSON());\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
