@@ -7,10 +7,10 @@ export default Backbone.View.extend({
         "click .btn_add": "act_add", 
     },    
     act_add: function (evt) {
-        let title = this.$el.find(".input_title").val();        
+        let task = this.$el.find(".input_title").val();        
         let body = this.$el.find(".input_body").val();
-        let success = this.collection.add({
-            title,
+        let success = this.collection.create({
+            task,
             body
         }, {validate: true});
         console.log(success);
