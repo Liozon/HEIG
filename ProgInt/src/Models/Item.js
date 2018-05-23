@@ -9,7 +9,7 @@ export default Backbone.Model.extend({
     },
     validate: function(attrs, options) {
         if (!_.isString(attrs.title) || attrs.title == "") {
-            return "Error title invalid";
+            //return "Error title invalid";
         }
     }
 });

@@ -405,7 +405,7 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($, _) {//import Master from \"Models/Master\";\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Backbone.Model.extend({    \n    defaults: function () {\n       return {\n            \"foo\":  \"bar\",\n            \"createAt\": $.now()\n        }\n    },\n    validate: function(attrs, options) {\n        if (!_.isString(attrs.title) || attrs.title == \"\") {\n            return \"Error title invalid\";\n        }\n    }\n}));\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\"), __webpack_require__(/*! underscore */ \"./node_modules/underscore/underscore.js\")))\n\n//# sourceURL=webpack:///./src/Models/Item.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($, _) {//import Master from \"Models/Master\";\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Backbone.Model.extend({    \n    defaults: function () {\n       return {\n            \"foo\":  \"bar\",\n            \"createAt\": $.now()\n        }\n    },\n    validate: function(attrs, options) {\n        if (!_.isString(attrs.title) || attrs.title == \"\") {\n            //return \"Error title invalid\";\n        }\n    }\n}));\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\"), __webpack_require__(/*! underscore */ \"./node_modules/underscore/underscore.js\")))\n\n//# sourceURL=webpack:///./src/Models/Item.js?");
 
 /***/ }),
 
