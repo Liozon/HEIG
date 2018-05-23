@@ -1,0 +1,20 @@
+<h1>Les dernières news:</h1>
+<fieldset>
+    <input type="text" class="input_title">
+    <textarea class="input_body"></textarea>
+    <button class="btn_add">Ajouter</button>
+</fieldset>
+{{#each items}}
+    <article class="task">
+      <h1>{{ task }}</h1>
+      <div class="body">
+        {{ body }}
+      </div>
+      <footer>
+          Written by {{id}}         
+          <button class="btn_delete" data-index="{{@index}}">
+              Effacer
+          </button>
+      </footer>
+    </article>
+{{/each}}
