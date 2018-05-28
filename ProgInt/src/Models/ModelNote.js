@@ -1,3 +1,5 @@
+import {LocalStorage} from 'backbone.localstorage';
+
 export default Backbone.Model.extend({
     initialize: function (attrs, option) {
         console.log(this.toJSON());
@@ -7,11 +9,11 @@ export default Backbone.Model.extend({
         })
     },
     defaults: {
-        id: $.now(),
         nom: "",
         prenom: "",
         note: 1
     },
+    localStorage: new LocalStorage("Eleve"),
     validate: function (attrs, options) {
         if (!_.isString(attrs.nom) || !attrs.nom) {
             return "nom invalide";
