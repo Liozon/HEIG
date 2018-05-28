@@ -1,18 +1,15 @@
-export default Backbone.Model.extend({
+//import Master from "Models/Master";
 
-    initialize: function (attrs, options) {
-
-    },
-
+export default Backbone.Model.extend({    
     defaults: function () {
-        return {
-            "createdAt": $.now()
+       return {
+            "foo":  "bar",
+            "createAt": $.now()
         }
     },
-
-    /*validate: function (attrs, options) {
-        if (attrs.onLoan == ) {
-            return "can't end before it starts";
+    validate: function(attrs, options) {
+        if (!_.isString(attrs.title) || attrs.title == "") {
+            //return "Error title invalid";
         }
-    }*/
+    }
 });
