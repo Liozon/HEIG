@@ -1,4 +1,4 @@
-import Backbone from "Backbone";
+import Backbone from "backbone";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ViewTaskForm from "Views/TaskForm"
