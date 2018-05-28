@@ -1,20 +1,21 @@
 import Backbone from "Backbone";
-import ViewTaskForm from "Views/TaskForm";
-import ViewTask from "Views/Tasks";
-import ModelTask from "Models/Tasks";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ViewTaskForm from "Views/TaskForm"
+import ViewTaskList from "Views/TaskList"
+import CollectionTask from "Models/Tasks"
 
-var task = new ModelTask();
+let tasks = new CollectionTask();
 
-$(function() {
-    let viewTask = new ViewTask({
-        collection: task
+$(function () {       
+    let viewTaskForm = new ViewTaskForm({
+        collection: tasks
     });
-    viewTask.render().appendTo("#taskList");
-    task.fetch();   
-    
-    
-    let viewTaskForm = new ViewTaskForm();
     viewTaskForm.render().appendTo("#taskForm");
+    
+    let viewTaskList = new ViewTaskList({
+        collection: tasks
+    });
+    viewTaskList.render().appendTo("#taskList");
+    tasks.fetch();
 })

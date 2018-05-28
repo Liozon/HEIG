@@ -1,9 +1,11 @@
-<form>
+<fieldset class="mb-4">
     <div class="form-group">
         <label for="inputTask">Task</label>
-        <input type="text" class="form-control" id="inputTask" placeholder="Entrez le nom de la tâche...">
-        <label for="inputDate">Date</label>
-        <input id="inputDate" type="date" class="form-control">
+        <input type="text" class="form-control inputTask" placeholder="Task todo ...">        
     </div>
-    <button type="button" class="btn btn-primary">Ajouter</button>
-</form>
+    <div class="form-group">
+        <label for="inputTask">Todo before</label>
+        <input type="date" class="form-control inputDate" placeholder="date">        
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</fieldset>

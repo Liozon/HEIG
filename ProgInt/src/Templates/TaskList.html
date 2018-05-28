@@ -1,0 +1,20 @@
+<div class="card mb-4">
+    <div class="card-header text-white bg-dark">
+        Todo List
+    </div>
+    <ul class="list-group">        
+        {{#each tasks}}
+            <li class="list-group-item">
+                <div class="d-flex flex-column">
+                    <div class="d-flex">
+                        <span>{{task}}</span>
+                        <button type="button" class="btn btn-danger ml-auto" data-task-id="{{id}}">Delete</button>
+                    </div>
+                    <div>
+                        Todo before: <time>{{convUtimeToLocal time}}</time>
+                    </div>                    
+                </div>                                
+            </li>
+        {{/each}}
+    </ul>    
+</div>

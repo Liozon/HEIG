@@ -115,6 +115,17 @@ eval("exports = module.exports = __webpack_require__(/*! ../../../css-loader/lib
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./src/Styles/Tasks.css":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader!./src/Styles/Tasks.css ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \"\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/Styles/Tasks.css?./node_modules/css-loader");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/lib/css-base.js":
 /*!*************************************************!*\
   !*** ./node_modules/css-loader/lib/css-base.js ***!
@@ -439,7 +450,7 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (Backbone.Model.extend({        \n        \n}));\n\n\n//# sourceURL=webpack:///./src/Models/Task.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony default export */ __webpack_exports__[\"default\"] = (Backbone.Model.extend({\r\n\r\n    initialize: function (attrs, options) {\r\n\r\n    },\r\n\r\n    defaults: function () {\r\n        return {\r\n            \"createdAt\": $.now()\r\n        }\r\n    },\r\n}));\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/Models/Task.js?");
 
 /***/ }),
 
@@ -451,7 +462,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var Models_Task__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Models/Task */ \"./src/Models/Task.js\");\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Backbone.Collection.extend({\n    model: Models_Task__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n    url: \"https://chabloz.eu/ws/api/v1/tasks\"\n}));\n\n//# sourceURL=webpack:///./src/Models/Tasks.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var Models_Task__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Models/Task */ \"./src/Models/Task.js\");\n\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (Backbone.Collection.extend({\r\n    model: Models_Task__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\r\n    url: \"https://chabloz.eu/ws/api/v1/tasks\"\r\n}));\n\n//# sourceURL=webpack:///./src/Models/Tasks.js?");
+
+/***/ }),
+
+/***/ "./src/Styles/Tasks.css":
+/*!******************************!*\
+  !*** ./src/Styles/Tasks.css ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader!./Tasks.css */ \"./node_modules/css-loader/index.js!./src/Styles/Tasks.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/Styles/Tasks.css?");
 
 /***/ }),
 
@@ -462,30 +484,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var Mode
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var Handlebars = __webpack_require__(/*! ./node_modules/handlebars/runtime.js */ \"./node_modules/handlebars/runtime.js\");\nfunction __default(obj) { return obj && (obj.__esModule ? obj[\"default\"] : obj); }\nmodule.exports = (Handlebars[\"default\"] || Handlebars).template({\"compiler\":[7,\">= 4.0.0\"],\"main\":function(container,depth0,helpers,partials,data) {\n    return \"<fieldset class=\\\"mb-4\\\">\\n    <div class=\\\"form-group\\\">\\n        <label for=\\\"inputTask\\\">Task</label>\\n        <input type=\\\"text\\\" class=\\\"form-control inputTask\\\" placeholder=\\\"Task todo ...\\\">        \\n    </div>\\n    <div class=\\\"form-group\\\">\\n        <label for=\\\"inputTask\\\">Todo before</label>\\n        <input type=\\\"date\\\" class=\\\"form-control inputDate\\\" placeholder=\\\"date\\\">        \\n    </div>\\n    <button type=\\\"submit\\\" class=\\\"btn btn-primary\\\">Submit</button>\\n</fieldset>\";\n},\"useData\":true});\n\n//# sourceURL=webpack:///./src/Templates/TaskForm.html?");
+eval("var Handlebars = __webpack_require__(/*! ./node_modules/handlebars/runtime.js */ \"./node_modules/handlebars/runtime.js\");\nfunction __default(obj) { return obj && (obj.__esModule ? obj[\"default\"] : obj); }\nmodule.exports = (Handlebars[\"default\"] || Handlebars).template({\"compiler\":[7,\">= 4.0.0\"],\"main\":function(container,depth0,helpers,partials,data) {\n    return \"<form>\\r\\n    <div class=\\\"form-group\\\">\\r\\n        <label for=\\\"inputTask\\\">Task</label>\\r\\n        <input type=\\\"text\\\" class=\\\"form-control\\\" id=\\\"inputTask\\\" placeholder=\\\"Entrez le nom de la tâche...\\\">\\r\\n        <label for=\\\"inputDate\\\">Date</label>\\r\\n        <input id=\\\"inputDate\\\" type=\\\"date\\\" class=\\\"form-control\\\">\\r\\n    </div>\\r\\n    <button type=\\\"button\\\" class=\\\"btn btn-primary\\\">Ajouter</button>\\r\\n</form>\";\n},\"useData\":true});\n\n//# sourceURL=webpack:///./src/Templates/TaskForm.html?");
 
 /***/ }),
 
-/***/ "./src/Templates/TaskList.html":
-/*!*************************************!*\
-  !*** ./src/Templates/TaskList.html ***!
-  \*************************************/
+/***/ "./src/Templates/Tasks.html":
+/*!**********************************!*\
+  !*** ./src/Templates/Tasks.html ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var Handlebars = __webpack_require__(/*! ./node_modules/handlebars/runtime.js */ \"./node_modules/handlebars/runtime.js\");\nfunction __default(obj) { return obj && (obj.__esModule ? obj[\"default\"] : obj); }\nmodule.exports = (Handlebars[\"default\"] || Handlebars).template({\"1\":function(container,depth0,helpers,partials,data) {\n    var alias1=container.lambda, alias2=container.escapeExpression;\n\n  return \"            <li class=\\\"list-group-item\\\">\\r\\n                <div class=\\\"d-flex flex-column\\\">\\r\\n                    <div class=\\\"d-flex\\\">\\r\\n                        <span>\"\n    + alias2(alias1((depth0 != null ? depth0.task : depth0), depth0))\n    + \"</span>\\r\\n                        <button type=\\\"button\\\" class=\\\"btn btn-danger ml-auto\\\" data-task-id=\\\"\"\n    + alias2(alias1((depth0 != null ? depth0.id : depth0), depth0))\n    + \"\\\">Delete</button>\\r\\n                    </div>\\r\\n                    <div>\\r\\n                        Todo before: <time>\"\n    + alias2(__default(__webpack_require__(/*! ./src/Templates/convUtimeToLocal.js */ \"./src/Templates/convUtimeToLocal.js\")).call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.time : depth0),{\"name\":\"convUtimeToLocal\",\"hash\":{},\"data\":data}))\n    + \"</time>\\r\\n                    </div>                    \\r\\n                </div>                                \\r\\n            </li>\\r\\n\";\n},\"compiler\":[7,\">= 4.0.0\"],\"main\":function(container,depth0,helpers,partials,data) {\n    var stack1;\n\n  return \"<div class=\\\"card mb-4\\\">\\r\\n    <div class=\\\"card-header text-white bg-dark\\\">\\r\\n        Todo List\\r\\n    </div>\\r\\n    <ul class=\\\"list-group\\\">        \\r\\n\"\n    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.tasks : depth0),{\"name\":\"each\",\"hash\":{},\"fn\":container.program(1, data, 0),\"inverse\":container.noop,\"data\":data})) != null ? stack1 : \"\")\n    + \"    </ul>    \\r\\n</div>\\r\\n\";\n},\"useData\":true});\n\n//# sourceURL=webpack:///./src/Templates/TaskList.html?");
-
-/***/ }),
-
-/***/ "./src/Templates/convUtimeToLocal.js":
-/*!*******************************************!*\
-  !*** ./src/Templates/convUtimeToLocal.js ***!
-  \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function(time) {    \n    return (new Date(time * 1000)).toLocaleDateString();\n});\n\n\n\n\n\n//# sourceURL=webpack:///./src/Templates/convUtimeToLocal.js?");
+eval("var Handlebars = __webpack_require__(/*! ./node_modules/handlebars/runtime.js */ \"./node_modules/handlebars/runtime.js\");\nfunction __default(obj) { return obj && (obj.__esModule ? obj[\"default\"] : obj); }\nmodule.exports = (Handlebars[\"default\"] || Handlebars).template({\"1\":function(container,depth0,helpers,partials,data) {\n    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3=\"function\", alias4=container.escapeExpression;\n\n  return \"    <article class=\\\"task\\\">\\r\\n      <h1>\"\n    + alias4(((helper = (helper = helpers.task || (depth0 != null ? depth0.task : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\"name\":\"task\",\"hash\":{},\"data\":data}) : helper)))\n    + \"</h1>\\r\\n      <div class=\\\"body\\\">\\r\\n        \"\n    + alias4(((helper = (helper = helpers.body || (depth0 != null ? depth0.body : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\"name\":\"body\",\"hash\":{},\"data\":data}) : helper)))\n    + \"\\r\\n      </div>\\r\\n      <footer>\\r\\n          Written by \"\n    + alias4(((helper = (helper = helpers.time || (depth0 != null ? depth0.time : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\"name\":\"time\",\"hash\":{},\"data\":data}) : helper)))\n    + \"          \\r\\n          <button class=\\\"btn_delete btn\\\" data-index=\\\"\"\n    + alias4(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\"name\":\"index\",\"hash\":{},\"data\":data}) : helper)))\n    + \"\\\">\\r\\n              Effacer\\r\\n          </button>\\r\\n      </footer>\\r\\n    </article>\\r\\n\";\n},\"compiler\":[7,\">= 4.0.0\"],\"main\":function(container,depth0,helpers,partials,data) {\n    var stack1;\n\n  return \"<h1>Les dernières tâches</h1>\\r\\n\"\n    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.items : depth0),{\"name\":\"each\",\"hash\":{},\"fn\":container.program(1, data, 0),\"inverse\":container.noop,\"data\":data})) != null ? stack1 : \"\");\n},\"useData\":true});\n\n//# sourceURL=webpack:///./src/Templates/Tasks.html?");
 
 /***/ }),
 
@@ -497,19 +507,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var Templates_TaskForm_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Templates/TaskForm.html */ \"./src/Templates/TaskForm.html\");\n/* harmony import */ var Templates_TaskForm_html__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(Templates_TaskForm_html__WEBPACK_IMPORTED_MODULE_0__);\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Backbone.View.extend({    \n    events: {\n        'click button': 'act_add'\n    },\n    act_add: function (evt) {\n        let inputTask = this.$el.find(\".inputTask\");\n        let inputDate = this.$el.find(\".inputDate\");\n        let task = inputTask.val();        \n        let time = Math.round((new Date(inputDate.val())) / 1000);\n        this.collection.create({task, time});  \n        inputTask.val('');\n        inputDate.val('');\n        inputTask.focus();\n    },\n    initialize: function(attrs, options) {        \n        this.template =  Templates_TaskForm_html__WEBPACK_IMPORTED_MODULE_0___default.a;        \n    },\n    render: function() {      \n        this.$el.html(this.template());\n        return this.$el; \n    }\n}));\n\n//# sourceURL=webpack:///./src/Views/TaskForm.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var Templates_TaskForm_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Templates/TaskForm.html */ \"./src/Templates/TaskForm.html\");\n/* harmony import */ var Templates_TaskForm_html__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(Templates_TaskForm_html__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (Backbone.View.extend({\r\n    events: {\r\n        'click button': 'act_add'\r\n    },\r\n    act_add: function (evt) {\r\n        //console.log(\"Coucou\");\r\n        console.log($(\"#inputTask\").val());\r\n        var task = Backbone.Model.extend({\r\n            urlRoot: 'Models/Tasks'\r\n        });\r\n\r\n        var newTask = new task({\r\n            title: $(\"#inputTask\").val(),\r\n            time: $.now()\r\n        });\r\n        this.model.render();\r\n\r\n        /*this.model.sync({\r\n            task: $('#inputTask').val(),\r\n            time: $.now()\r\n        });\r\n        this.model.save();*/\r\n    },\r\n    initialize: function (attrs, options) {\r\n        this.template = Templates_TaskForm_html__WEBPACK_IMPORTED_MODULE_0___default.a;\r\n    },\r\n    render: function () {\r\n        this.$el.html(this.template());\r\n        return this.$el;\r\n    }\r\n}));\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/Views/TaskForm.js?");
 
 /***/ }),
 
-/***/ "./src/Views/TaskList.js":
-/*!*******************************!*\
-  !*** ./src/Views/TaskList.js ***!
-  \*******************************/
+/***/ "./src/Views/Tasks.js":
+/*!****************************!*\
+  !*** ./src/Views/Tasks.js ***!
+  \****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var Templates_TaskList_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Templates/TaskList.html */ \"./src/Templates/TaskList.html\");\n/* harmony import */ var Templates_TaskList_html__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(Templates_TaskList_html__WEBPACK_IMPORTED_MODULE_0__);\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Backbone.View.extend({    \n    events: {\n        'click button': 'act_delete'\n    },\n    act_delete: function (event) {  \n        let taskId = $(event.target).attr('data-task-id');\n        let model = this.collection.get(taskId);\n        $('#modalConfirm').modal();\n        $('#btnConfirmDelete').off();\n        $('#btnConfirmDelete').one('click', () => {                        \n            model.destroy();\n        });\n    },\n    initialize: function(attrs, options) {        \n        this.template =  Templates_TaskList_html__WEBPACK_IMPORTED_MODULE_0___default.a;    \n        this.listenTo(this.collection, \"change add remove\", this.render);     \n    },\n    render: function() {      \n        this.$el.html(this.template({\n            tasks: this.collection.toJSON()\n        }));\n        return this.$el; \n    }\n}));\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/Views/TaskList.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var Templates_Tasks_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Templates/Tasks.html */ \"./src/Templates/Tasks.html\");\n/* harmony import */ var Templates_Tasks_html__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(Templates_Tasks_html__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var Styles_Tasks_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Styles/Tasks.css */ \"./src/Styles/Tasks.css\");\n/* harmony import */ var Styles_Tasks_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(Styles_Tasks_css__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (Backbone.View.extend({       \r\n    events: {\r\n        \"click .btn_delete\": \"act_delete\",  \r\n        \"click .btn_add\": \"act_add\", \r\n    },    \r\n    act_add: function (evt) {\r\n        let task = this.$el.find(\".input_title\").val();        \r\n        let body = this.$el.find(\".input_body\").val();\r\n        let success = this.collection.create({\r\n            task,\r\n            body\r\n        }, {validate: true});\r\n        console.log(success);\r\n    },\r\n    act_delete: function (evt) {\r\n        let ind = $(evt.target).attr(\"data-index\");\r\n        let model = this.collection.at(ind);\r\n        model.destroy();        \r\n    },\r\n    initialize: function(attrs, options) {\r\n        this.$el.addClass('items');\r\n        this.template =  attrs.template || Templates_Tasks_html__WEBPACK_IMPORTED_MODULE_0___default.a;\r\n        this.listenTo(this.collection, \"change add remove\", this.render);     \r\n    },\r\n    render: function() {      \r\n        this.$el.html(this.template({\r\n            items: this.collection.toJSON(),            \r\n        }));\r\n        return this.$el; \r\n    }\r\n}));\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/Views/Tasks.js?");
 
 /***/ }),
 
@@ -521,7 +531,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var Backbone__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Backbone */ \"./node_modules/Backbone/backbone.js\");\n/* harmony import */ var Backbone__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(Backbone__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bootstrap__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var Views_TaskForm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Views/TaskForm */ \"./src/Views/TaskForm.js\");\n/* harmony import */ var Views_TaskList__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Views/TaskList */ \"./src/Views/TaskList.js\");\n/* harmony import */ var Models_Tasks__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Models/Tasks */ \"./src/Models/Tasks.js\");\n\n\n\n\n\n\n\nlet tasks = new Models_Tasks__WEBPACK_IMPORTED_MODULE_5__[\"default\"]();\n\n$(function () {       \n    let viewTaskForm = new Views_TaskForm__WEBPACK_IMPORTED_MODULE_3__[\"default\"]({\n        collection: tasks\n    });\n    viewTaskForm.render().appendTo(\"#taskForm\");\n    \n    let viewTaskList = new Views_TaskList__WEBPACK_IMPORTED_MODULE_4__[\"default\"]({\n        collection: tasks\n    });\n    viewTaskList.render().appendTo(\"#taskList\");\n    tasks.fetch();\n})\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var Backbone__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Backbone */ \"./node_modules/Backbone/backbone.js\");\n/* harmony import */ var Backbone__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(Backbone__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var Views_TaskForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Views/TaskForm */ \"./src/Views/TaskForm.js\");\n/* harmony import */ var Views_Tasks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Views/Tasks */ \"./src/Views/Tasks.js\");\n/* harmony import */ var Models_Tasks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Models/Tasks */ \"./src/Models/Tasks.js\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(bootstrap__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_5__);\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nvar task = new Models_Tasks__WEBPACK_IMPORTED_MODULE_3__[\"default\"]();\r\n\r\n$(function() {\r\n    let viewTask = new Views_Tasks__WEBPACK_IMPORTED_MODULE_2__[\"default\"]({\r\n        collection: task\r\n    });\r\n    viewTask.render().appendTo(\"#taskList\");\r\n    task.fetch();   \r\n    \r\n    \r\n    let viewTaskForm = new Views_TaskForm__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\r\n    viewTaskForm.render().appendTo(\"#taskForm\");\r\n})\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
