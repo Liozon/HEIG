@@ -1,3 +1,4 @@
+<h3>Moyenne de classe: {{moyenne}}</h3>
 <table class="table">
     <thead>
         <tr>
@@ -14,11 +15,9 @@
             <td>{{nom}}</td>
             <td>{{note}}</td>
             <td>
-                <action>
-                    <button type="button" class="btn btn-danger btn_delete" id="{{@index}}">Supprimer</button>
-                    <button type="button" class="btn btn-success btn_modifier" id="{{@index}}">Modifier</button>
-                    <button type="button" class="btn btn-primary btn_comparer" id="{{@index}}">Comparer</button>
-                </action>
+                <button type="button" class="btn btn-primary btn_comparer" eleve-action-id="{{id}}">Comparer</button>
+                <button type="button" class="btn btn-success btn_modifier" eleve-action-id="{{id}}">Modifier</button>
+                <button type="button" class="btn btn-danger btn_delete" eleve-action-id="{{id}}">Supprimer</button>
             </td>
         </tr>
         {{/each}}

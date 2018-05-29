@@ -1,5 +1,3 @@
-import {LocalStorage} from 'backbone.localstorage';
-
 export default Backbone.Model.extend({
     initialize: function (attrs, option) {
         console.log(this.toJSON());
@@ -9,16 +7,13 @@ export default Backbone.Model.extend({
         })
     },
     defaults: {
-        nom: "",
-        prenom: "",
         note: 1
     },
-    localStorage: new LocalStorage("Eleve"),
     validate: function (attrs, options) {
-        if (!_.isString(attrs.nom) || !attrs.nom) {
+        if (!_.isString(attrs.nom) || attrs.nom.trim() == '') {
             return "nom invalide";
         }
-        if (!_.isString(attrs.prenom) || !attrs.prenom) {
+        if (!_.isString(attrs.prenom) || attrs.prenom.trim() == '') {
             return "prénom invalide";
         }
         if (!_.isNumber(attrs.note) || !attrs.note > 1 && !attrs.note < 6) {

@@ -11,7 +11,9 @@ import ViewTaskList from "Views/TaskList"
 import CollectionTask from "Models/Tasks"*/
 
 /*let tasks = new CollectionTask();*/
+//let eleves = new ModelNotes({storageName: 'eleves'});
 let eleves = new ModelNotes();
+eleves.fetch();
 
 $(function () {
 
@@ -41,18 +43,40 @@ $(function () {
     m3.isValid();
 
     eleves.add([m1, m2, m3]);*/
-    
+
+    /*eleves.create({
+        nom: 'Oui',
+        prenom: 'Non',
+        note: 5.5
+    });
+    eleves.create({
+        nom: 'Couille',
+        prenom: 'Connard',
+        note: 2
+    });
+    eleves.create({
+        nom: 'Thibat',
+        prenom: 'Cuttot',
+        note: 1
+    });
+    eleves.create({
+        nom: 'SSSSSSSHANDWICH',
+        prenom: 'BD',
+        note: 1
+    });*/
+
+
+
     let viewFormNotes = new ViewFormNotes({
         collection: eleves
     });
     viewFormNotes.render().appendTo("#FormNotes");
-    
+
+
     let viewListeNotes = new ViewModelNotes({
         collection: eleves
     });
     viewListeNotes.render().appendTo("#listeNotes");
-    eleves.fetch();
-    
 
 
     /*
