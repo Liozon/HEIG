@@ -1,0 +1,49 @@
+<h3>Moyenne de classe: {{moyenne}}</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nom</th>
+            <th scope="col">Prénom</th>
+            <th scope="col">Note</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each eleves}}
+        <tr>
+            <td eleve-action-id="{{id}}" class="editable prenom">{{prenom}}</td>
+            <td eleve-action-id="{{id}}" class="editable nom">{{nom}}</td>
+            <td eleve-action-id="{{id}}" class="editable note">{{note}}</td>
+            <td>
+                <button type="button" class="btn btn-success btn_modifier" eleve-action-id="{{id}}">Modifier</button>
+                <button type="button" class="btn btn-primary btn_comparer" eleve-action-id="{{id}}">Comparer</button>
+                <button type="button" class="btn btn-danger btn_delete" eleve-action-id="{{id}}">Supprimer</button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+
+
+<!--<div>
+    {{#each eleves}}
+    <div>
+        <p>
+            {{nom}}
+        </p>
+        <p>
+            {{prenom}}
+        </p>
+        <p>
+            {{note}}
+        </p>
+        <br>
+        <action>
+            <button id="{{@index}}">Supprimer</button>
+            <button id="{{@index}}">Modifier</button>
+            <button id="{{@index}}">Comparer</button>
+        </action>
+    </div>
+    {{/each}}
+</div>-->
