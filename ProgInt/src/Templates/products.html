@@ -1,0 +1,10 @@
+ {{#each shopProducts}}
+<ul class="list-group">
+    <li class="list-group-item" data-id="{{id}}">Produit: {{name}}</li>
+    <li class="list-group-item" data-id="{{id}}">Marque: {{brand}}</li>
+    <li class="list-group-item" data-id="{{id}}">Prix: {{price}} CHF</li>
+    <li class="list-group-item" data-id="{{id}}">Catégorie: {{type}}</li>
+    <button type="button" class="btn btn-primary add-to-cart" data-id="{{id}}">Ajouter au panier</button>
+</ul>
+<br>
+{{/each}}

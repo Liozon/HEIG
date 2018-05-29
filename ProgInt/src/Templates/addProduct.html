@@ -1,0 +1,21 @@
+<div>
+    <form>
+        <div class="form-group">
+            <label for="productName">Nom du produit</label>
+            <input required type="text" class="form-control input_productName" id="input_productName" placeholder="Lenovo T450s">
+            <label for="brand">Marque du produit</label>
+            <input required type="text" class="form-control input_brand" id="input_brand" placeholder="Lenovo">
+            <label class="mr-sm-2" for="type">Catégorie</label>
+            <select required class="custom-select mr-sm-2 input_type" id="inlineFormCustomSelect">
+                <option selected>Choisir...</option>
+                <option value="headset">Headset</option>
+                <option value="keyboard">Keyboard</option>
+                <option value="mouse">Mouse</option>
+            </select>
+            <label for="price">Prix</label>
+            <input required type="number" step="0.01" class="form-control input_price" id="input_note" placeholder="6" min="0">
+        </div>
+        <button type="submit" class="btn btn-primary save_input">Enregistrer le produit</button>
+        <p></p>
+    </form>
+</div>

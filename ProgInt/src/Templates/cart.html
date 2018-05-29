@@ -1,0 +1,11 @@
+{{#each cartProducts}}
+<ul class="list-group">
+    <li class="list-group-item" data-id="{{id}}">Produit: {{name}}</li>
+    <li class="list-group-item" data-id="{{id}}">Marque: {{brand}}</li>
+    <li class="list-group-item" data-id="{{id}}">Prix: {{price}} CHF</li>
+    <li class="list-group-item" data-id="{{id}}">Catégorie "{{type}}"</li>
+    <button type="button" class="btn btn-danger remove-from-cart" data-id="{{id}}">Supprimer du panier</button>
+</ul>
+<br>
+{{/each}}
+<h3>Total du panier: {{total}} CHF</h3>
