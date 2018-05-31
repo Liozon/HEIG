@@ -6,3 +6,4 @@ Please note that I'm studying Java, the programs won't be super efficient and pe
 What's available:
 - Jukebox: a little CD player that can play 5 different CD in a player
 - Tamagotchi: a little program that creates an object, a Tamagotchi, with a name, and the user can feed it maximum 3 times before sending it to sleep
+(List to update...)
