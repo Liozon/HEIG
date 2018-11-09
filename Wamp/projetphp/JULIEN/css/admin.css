@@ -1,0 +1,34 @@
+.uk-card-badge {
+  top: 0;
+  right: 0;
+}
+
+#logo{
+  width: 150px;
+}
+
+header{
+  margin-top: 30px;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+}
+
+footer {
+  margin-top: 60px;
+  font-size: 15px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+.uk-button-primary,
+.uk-button-primary:hover {
+  border-color:  #47d147;
+  background: transparent;
+  color: black;
+}

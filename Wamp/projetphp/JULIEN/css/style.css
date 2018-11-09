@@ -1,0 +1,71 @@
+.connexion-msg{
+  color: red;
+
+  display: none;
+}
+
+.inscription-msg {
+  display: none;
+  color: red;
+}
+
+.inscription-reussi-msg {
+  display: none;
+  color: green;
+}
+
+.nb {
+  font-weight: bold;
+}
+
+.description {
+  font-size: 20px;
+}
+
+.button_inscription {
+  margin-top: 20px;
+  border-color:  #47d147;
+}
+
+#desc_prod {
+  margin-top: 30px;
+font-style: italic;
+text-align:center;;
+}
+
+.outofthebox {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+}
+footer {
+  margin-top: 60px;
+  font-size: 15px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.uk-card-body .uk-label  {
+ margin-bottom: 40px;
+
+}
+
+#logo{
+  width: 150px;
+}
+
+.uk-label {
+  padding: 5px 15px;
+}
+
+.uk-card-badge {
+  top : 0px;
+  right:0px;
+}
+
+header{
+  margin-top: 30px;
+}

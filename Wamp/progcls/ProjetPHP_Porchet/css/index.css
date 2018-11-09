@@ -1,0 +1,11 @@
+body {
+    padding:50px;
+}
+
+.alignRight {
+    text-align:right;
+}
+
+th {
+    font-weight:300;
+}
