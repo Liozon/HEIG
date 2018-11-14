@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=0.1">
+    <title>wms (800×400)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <style type="text/css">
+        span {
+            font-weight: bold;
+        }
+
+        #map img {
+            width: 800;
+            height: 400;
+            position: absolute;
+            top: 50;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>
+        PAN: <span id="eastBtn">East</span> - <span id="northBtn">North</span> - <span id="westBtn">West</span> - <span
+            id="southBtn">South</span> |
+        ZOOM: <span id="zinBtn">In</span> - <span id="zoutBtn">Out</span>
+    </p>
+    <div id="map">
+        <img id="layer1" src="" alt="Map">
+    </div>
+</body>
+
+</html>
