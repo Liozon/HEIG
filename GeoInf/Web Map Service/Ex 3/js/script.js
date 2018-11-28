@@ -83,7 +83,8 @@ var test3 = new ol.layer.Image({
             params: {
                 VERSION: "1.0.0",
                 LAYERS: "geoinf:pk25",
-                FORMAT: "image/png"
+                FORMAT: "image/png",
+                STYLES: 'pk25style'
             }
         })
     });
