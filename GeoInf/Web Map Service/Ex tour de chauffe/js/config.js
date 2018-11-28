@@ -76,7 +76,7 @@ document.write(scriptTag);
  * May be some useful functions
  */
 function showExtent(bbox) {
-    vectors = new ol.layer.Vector({source: new ol.source.Vector()});
+    vectors = new ol.layer.Vector({ source: new ol.source.Vector() });
     map.addLayer(vectors);
-    vectors.getSource().addFeatures([new ol.Feature({geometry: new ol.geom.Polygon.fromExtent(bbox)})]);
+    vectors.getSource().addFeatures([new ol.Feature({ geometry: new ol.geom.Polygon.fromExtent(bbox) })]);
 }

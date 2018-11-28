@@ -8,7 +8,8 @@ $(document).ready(function () {
             })
         ]
     });
-    var wmsLayer = new ol.layer.Image({
+    // Carte de base (masquée)
+    var carteDeBase = new ol.layer.Image({
         source: new ol.source.ImageWMS({
             url: blWMS,
             ratio: 1,
@@ -19,9 +20,23 @@ $(document).ready(function () {
             }
         })
     });
-   // map.addLayer(wmsLayer);
+    // map.addLayer(carteDeBase);
 
-    var myLayer = new ol.layer.Image({
+    var antenne4g = new ol.layer.Image({
+        source: new ol.source.ImageWMS({
+            url: chWMS,
+            ratio: 1,
+            params: {
+                VERSION: "1.0.0",
+                LAYERS: "ch.bakom.mobilnetz-4g",
+                FORMAT: "image/png"
+            }
+        })
+    });
+
+    map.addLayer(antenne4g);
+
+    var canton = new ol.layer.Image({
         source: new ol.source.ImageWMS({
             url: chWMS,
             ratio: 1,
@@ -33,9 +48,9 @@ $(document).ready(function () {
         })
     });
 
-    map.addLayer(myLayer);
+    map.addLayer(canton);
 
-    var canton = new ol.layer.Image({
+    var commune = new ol.layer.Image({
         source: new ol.source.ImageWMS({
             url: chWMS,
             ratio: 1,
@@ -47,25 +62,11 @@ $(document).ready(function () {
         })
     });
 
-    map.addLayer(canton);
-
-    var myLayer2 = new ol.layer.Image({
-        source: new ol.source.ImageWMS({
-            url: chWMS,
-            ratio: 1,
-            params: {
-                VERSION: "1.0.0",
-                LAYERS: "ch.bazl.sicherheitszonenplan",
-                FORMAT: "image/png"
-            }
-        })
-    });
-
-    map.addLayer(myLayer2);
+    map.addLayer(commune);
 
     // Configuration of the map view
     var v2 = new ol.View({ projection: "EPSG:4326" });
-    var cbox = [8, 47]; // NB: c'est le centre de l'extent_init ci-dessus
+    var cbox = [8.2, 46.8]; // NB: c'est le centre de l'extent_init ci-dessus
     v2.setCenter(cbox);
     v2.setZoom(9);
     map.setView(v2);
