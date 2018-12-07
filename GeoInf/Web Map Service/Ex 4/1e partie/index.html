@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>ol3 - Ex6a - GeoJSON vector overlay</title>
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript">
+        var map;
+        $(document).ready(function () {
+            map = new ol.Map({
+                view: new ol.View({
+                    center: [738600, 5840171],
+                    zoom: 3
+                }),
+                target: 'map',
+                layers: [
+                    new ol.layer.Tile({
+                        source: new ol.source.OSM()
+                    })
+                ]
+            });
+            vectorLayer = new ol.layer.Vector({
+                source: new ol.source.Vector({
+                    url: 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson',
+                    format: new ol.format.GeoJSON()
+                })
+            });
+            map.addLayer(vectorLayer);
+
+            $(document).keypress(displayTitles);
+        });
+
+        function displayTitles() {
+            var src = vectorLayer.getSource();
+            var features = src.getFeatures();
+
+            for (ft of features) {
+                $("#info").append("<p>" + ft.get('title') + "</p>");
+                //$("#info").append(ft.get('title'));
+                //$("#info").append("</p>");
+            }
+
+            for (var i = 0; i < features.length; i++) {
+                console.log(features[i].get('title'));
+            }
+
+            // console.log(features.get('title'));
+        }
+    </script>
+
+    <style type="text/css">
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        #info {
+            position: absolute;
+            top: 20px;
+            left: 60px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="info">
+    </div>
+    <div id="map"></div>
+</body>
+
+</html>
