@@ -23,6 +23,6 @@
         "glob-parent": "^6.0.2",
         "normalize-url": "^8.0.0",
         "npm-check-updates": "^16.10.15",
-        "postcss": "^8.4.26"
+        "postcss": "^8.4.31"
     }
 }
