@@ -20,6 +20,6 @@
         "vue": "^3.3.4"
     },
     "dependencies": {
-        "npm-check-updates": "^16.10.15"
+        "npm-check-updates": "^19.3.1"
     }
 }
