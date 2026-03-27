@@ -21,7 +21,7 @@
     "backbone": "^1.4.1",
     "backbone.localstorage": "^2.1.0",
     "bootstrap": "^5.2.0",
-    "handlebars": "^4.7.7",
+    "handlebars": "^4.7.9",
     "jquery": "^3.6.0",
     "npm-check-updates": "^15.3.4",
     "popper.js": "^1.16.1",
